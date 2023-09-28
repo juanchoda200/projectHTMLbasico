@@ -1,5 +1,7 @@
 @import "banner.css";
 @import "footer.css";
+@import "contacto.css";
+@import "imagenes.css";
 body {
 
     background-size: 100%;
@@ -115,4 +117,3 @@ header label:hover{
         flex-direction: row;
     }
 }
-
