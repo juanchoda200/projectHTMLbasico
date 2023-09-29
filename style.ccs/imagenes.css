@@ -1,6 +1,24 @@
 .imagen{
-    position: absolute;
-    border: 1px ;
-    top: 1px;
-    right: 1500px;
+width: 100px;
+border-radius: 5px;
+box-shadow: 0 2px 4px green
 }
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .product {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .imagen {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }

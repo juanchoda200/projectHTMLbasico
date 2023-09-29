@@ -4,15 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dental House</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        .Contáctanos1 {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px green
+        }
+
+        .Contáctanos {
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #a0a0a0;
+        }
+
+        .btn-primary {
+            background-color: green;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <article>
-        <h1>Bienvenidos a los productos de Dental House</h1>
-        <p>Me alegro que nos eligieras para comprar espero verte nueva mente </p>
-    </article>
-
-    <section>
-        <h2>productos</h2>
-    </section>
+    <div class="Contáctanos1">
+       <h1 class="Contáctanos">Contáctanos</h1>
+       <p>Escríbenos al siguiente correo:<br>Prueba@gmail.com</p>
+        <br>
+        <a href="https://www.instagram.com/casacomercialdentalhouse/?igshid=MzRlODBiNWFlZA%3D%3D"><img src="imageness/instagram.png"  alt="Redes__sociales"></a>
+        <a href="https://web.facebook.com/people/Dental-House-colombia/100067325186099/?mibextid=ZbWKwL"><img src="imageness/facebook.png"  alt="Redes__sociales"></a>
+        <br>
+        <br>
+        <form action="" id="MiFormulario">
+            <div class="form-group">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+            </div>
+        
+            <div class="form-group">
+              <input type="text" class="form-control" id="razón-social" placeholder="Razón Social">
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" id="celular" placeholder="Teléfono">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="" placeholder="">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="descripcion" placeholder="Mensaje" rows="5"></textarea>
+            </div>
+ <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+      </div>
 </body>
 </html>
