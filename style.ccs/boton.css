@@ -6,114 +6,70 @@ body {
 
     background-size: 100%;
     font-family: sans-serif;
+    background: rgb(255, 255, 255);
+    margin: 0%;
+}
 
-}
 header {
+    height: 90px;
     width: 100%;
-    background: rgb(255, 255, 255) ;
-    margin:auto;
+    background-color: #79ac78;
 }
-.menu > li {
+
+.contenedor-izq {
+    height: 90px;
+    width: 30%;
+    float: left;
+}
+
+.contenedor-der {
+    height: 90px;
+    width: 70%;
     float: right;
 }
-.menu li a {
-    background-color: green;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-
-}
-.menu li a:hover{
-    background-color: green;
-}
-#BtnMenu {
-    display: none;
-}
-header label {
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    border-right: 1px solid green;
-}
-header label:hover{
-    cursor: pointer;
-    background: black;
-}
-.menu li ul {
-    display: none;
-    position: absolute;
-    min-height: 140px;
-
-    
-}
-.menu li:hover >ul {
-    display: block;
-}
-.menu ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
+ul {
     display: flex;
-    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+ul li {
+    margin-top: 20px;
+    color: white;
 }
 
-@media screen and (max-widht:480px){
-    body {
-
-        background-size: 100%;
-        font-family: sans-serif;
-    
-    }
-    header {
-        width: 100%;
-        background: rgb(255, 255, 255) ;
-        margin:auto;
-    }
-    .menu > li {
-        float: right;
-    }
-    .menu li a {
-        background-color: green;
-        color: white;
-        text-decoration: none;
-        padding: 10px 15px;
-        display: block;
-    
-    }
-    .menu li a:hover{
-        background-color: green;
-    }
-    #BtnMenu {
-        display: none;
-    }
-    header label {
-        display: none;
-        width: 30px;
-        height: 30px;
-        padding: 10px;
-        border-right: 1px solid green;
-    }
-    header label:hover{
-        cursor: pointer;
-        background: black;
-    }
-    .menu li ul {
-        display: none;
-        position: absolute;
-        min-height: 140px;
-    
-    
-    }
-    .menu li:hover >ul {
-        display: block;
-    }
-    .menu ul {
-        margin: 0;
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-    }
+.submenu {
+    display: none; /* esto Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%; /* esto Coloca el submenú debajo del elemento padre */
+    left: 0;
+    background-color: #fff; /* esto le da Color de fondo del submenú */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* esto ayuda a dar Sombra para el submenú */
+    z-index: 1; /* Asegura que el submenú esté sobre otros elementos */
 }
+
+li:hover .submenu {
+    display: block;
+}
+.submenu li {
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+    
+}
+.submenu a {
+    color: #333;
+}
+.submenu li:hover a {
+    color: green;
+}
+
+@media screen and (max-width: 480px) { 
+    header{ height: 250px; 
+    } ul {
+         display: flex; flex-direction: column;
+          gap: 0; 
+        } 
+    }
