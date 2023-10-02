@@ -7,7 +7,7 @@ body {
     background-size: 100%;
     font-family: sans-serif;
     background: rgb(255, 255, 255);
-    margin: 0%;
+    margin: 0;
 }
 
 header {
@@ -33,34 +33,38 @@ ul {
     justify-content: flex-end;
     gap: 40px;
     cursor: pointer;
-    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 0;
 }
 ul li {
     margin-top: 20px;
     color: white;
+    
 }
-
+a{
+    color: white;
+    text-decoration: none;
+}
 .submenu {
-    display: none; /* esto Oculta el submenú por defecto */
+    display: none;
     position: absolute;
-    top: 100%; /* esto Coloca el submenú debajo del elemento padre */
-    left: 0;
-    background-color: #fff; /* esto le da Color de fondo del submenú */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* esto ayuda a dar Sombra para el submenú */
-    z-index: 1; /* Asegura que el submenú esté sobre otros elementos */
+    
 }
 
-li:hover .submenu {
+li:hover > .submenu {
     display: block;
 }
 .submenu li {
     display: block;
     margin: 0;
-    padding: 10px 15px;
+    padding: 10px 0px;
     
 }
 .submenu a {
-    color: #333;
+    color: white ; 
+    text-decoration: none;
+    
 }
 .submenu li:hover a {
     color: green;
