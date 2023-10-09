@@ -26,7 +26,7 @@ body {
   .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 2em;
+    align-items: center;
   }
   ul {
     display: flex;
@@ -38,10 +38,6 @@ body {
     color: white;
     padding: 0;
 }
-
-.brand {
-    margin-top: -7px
-  }
 
   .brand span{
     color: #000000
