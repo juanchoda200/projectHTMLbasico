@@ -2,30 +2,34 @@
 @import "footer.css";
 @import "contacto.css";
 @import "imagenes.css";
-body {
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-size: 100%;
     font-family: sans-serif;
     background: rgb(255, 255, 255);
     margin: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 header {
-    height: 90px;
     width: 100%;
     background-color: #51893a;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contenedor-izq {
-    height: 90px;
-    width: 30%;
-    float: left;
-}
-
-.contenedor-der {
-    height: 90px;
-    width: 70%;
-    float: right;
+.imagen{
+    width: 50px;
+    border-radius: 5px;
 }
 
 ul {
@@ -36,13 +40,6 @@ ul {
     cursor: pointer;
     text-decoration: none;
     color: white;
-    padding: 0;
-}
-
-ul li {
-    margin-top: 20px;
-    color: white;
-
 }
 
 a {
@@ -83,7 +80,9 @@ li:hover>.submenu {
     ul {
         display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: 30px;
+        font-size: 20px;
+        margin-top: 40px;
     }
 
     .contenedor-der {
@@ -97,12 +96,11 @@ li:hover>.submenu {
         transition: right 0.4s;
     }
 
-    .toggle {
+.navbar__toggle, 
+.navbar__close {
         display: block !important;
-        width: 2rem;
-        height: 2rem;
     }
-}
+}   
 
 .toggle {
     display: none;
@@ -110,4 +108,17 @@ li:hover>.submenu {
 
 .mostrar-menu {
     right: 0;
+}
+
+.navbar__toggle,
+.navbar__close {
+    display: none;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.navbar__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
 }

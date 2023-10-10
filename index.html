@@ -21,15 +21,31 @@
 </head>
 
 <html>
+
     <body>
         <header>
             <div class="contenedor-izq">
-                <img src="imageness/file.png " class="imagen"
-                    style="width: 70px; margin-top: 10px; margin-right: 400px; cursor: pointer;">
+                <img src="imageness/file.png " class="imagen">
             </div>
-            <img id="menu-toggle" class="toggle" src="./imageness/7586784.png" alt="">
+            <i class="navbar__toggle" id="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M14 4h6v6h-6z"></path>
+                  <path d="M4 14h6v6h-6z"></path>
+                  <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+               </svg>
+            </i>
+
             <div class="contenedor-der" id="menu">
-                <button id="menu-cerrar">Cerrar</button>
+                <i class="navbar__close" id="menu-cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M18 6l-12 12"></path>
+                      <path d="M6 6l12 12"></path>
+                   </svg>
+                </i>
+            
                 <ul>
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="./quienessomos..html">Nosotros</a></li>
@@ -80,6 +96,7 @@
             </div>
         </div>
     </body>
+
 </html>
 
 
@@ -101,6 +118,7 @@
 
 
 <html>
+
     <body>
      <footer class="footer">
         <div class="footer-content">
@@ -130,4 +148,5 @@
      </footer>
      <script src="./js/index.js"></script>
    </body>
+   
 </html>
