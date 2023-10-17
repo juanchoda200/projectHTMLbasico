@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Estilos del encabezado */
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .img-carrito {
+    width: 50px;
+    height: auto;
+  }
+  
+  /* Estilos de la sección de productos */
+  .productos {
+    padding: 20px;
+  }
+  
+  .productos h2 {
+    margin-bottom: 10px;
+  }
+  
+  .productos ul li {
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos de la sección de agregar producto */
+  .agregar-producto {
+    padding: 20px;
+  }
+  
+  .agregar-producto h2 {
+    margin-bottom: 10px;
+  }
+  
+  .agregar-producto form div {
+    margin-bottom: 10px;
+  }
+  
+  .agregar-producto label {
+    display: block;
+  }
+  
+  .agregar-producto input[type="text"],
+  .agregar-producto input[type="number"] {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .agregar-producto button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .agregar-producto button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos de la sección de total */
+  .total {
+    padding: 20px;
+    text-align: right;
+  }
+  
+  .total h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos del botón de compra */
+  #boton-compra {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #boton-compra:hover {
+    background-color: #d32f2f;
+  }

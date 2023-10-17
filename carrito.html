@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./ccs/carrito.css">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+<header>
+    <h1>Carrito de Compras</h1>
+    <img class="img-carrito" src="imageness/diente.png" alt="imagen del carrito">
+</header>
+
+<main>
+    <section class="productos">
+        <h2>Productos en el carrito</h2>
+        <ul id="lista-productos">
+            <!-- Aquí se agregarán los productos dinámicamente -->
+        </ul>
+    </section>
+
+    <section class="agregar-producto">
+        <h2>Agregar Producto</h2>
+        <form id="formulario-producto">
+            <div>
+                <label for="nombre-producto">Nombre:</label>
+                <input type="text" id="nombre-producto" name="nombre-producto">
+            </div>
+            <div>
+                <label for="precio-producto">Precio:</label>
+                <input type="number" id="precio-producto" name="precio-producto" step="0.01">
+            </div>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section class="total">
+        <h2>Total</h2>
+        <p id="total"></p>
+    </section>
+</main>
+
+<footer>
+    <button id="boton-compra">Finalizar Compra</button>
+</footer>
+
+<script src="./js/carrito.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #151515;
+    background-color: #000;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -15,17 +15,19 @@ body {
 
 .formulario {
     background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
     padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .formulario h2 {
-    color: #333;
-    font-size: 24px;
+    color: #fff;
+    font-size: 30px;
 }
 
 .formulario input {
@@ -34,22 +36,48 @@ body {
     margin: 10px 0;
     border: none;
     border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #222;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     outline: none;
+    box-sizing: border-box;
 }
 
 .formulario button {
     background-color: #0099FF;
-    color: #fff;
+    color: #000;
     padding: 12px;
     border: none;
     border-radius: 6px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 }
 
 .formulario button:hover {
-    background-color: #0080D6;
+    background-color: #000;
+    color: #fff;
+}
+
+.mensaje {
+    color: #fff;
+}
+
+
+@media screen and (max-width: 480px) {
+    .formulario {
+        padding: 10px;
+        max-width: 300px;
+    }
+
+    .formulario h2 {
+        font-size: 24px;
+    }
+
+    .formulario input,
+    .formulario button {
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+    }
 }

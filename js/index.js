@@ -13,3 +13,9 @@ if (closeButton) {
       menu.classList.remove('mostrar-menu')
     })
   }
+
+  const user = JSON.parse(localStorage.getItem("USURIO_ACTUAL"))
+
+  if (user) {
+    document,getElementById("userName").innerText = user.nombre
+  }

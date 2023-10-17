@@ -24,7 +24,7 @@ body {
 }
 
 .formulario h2 {
-    color: #333;
+    color: #fff;
     font-size: 24px;
 }
 
@@ -38,6 +38,7 @@ body {
     color: #fff;
     font-size: 16px;
     outline: none;
+    box-sizing: border-box;
 }
 
 .formulario button {
