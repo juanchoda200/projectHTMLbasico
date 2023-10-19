@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="./ccs/prevencion-diagnostico.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <head>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+      <h1>Lista de Productos</h1>
+    
+      <ul class="productos-lista">
+        <li class="producto-item" onclick="mostrarReseñas(1)">
+          <img src="imageness/diente.png" alt="Producto 1">
+          <div class="producto-info">
+            <h2>Nombre del Producto 1</h2>
+            <p>Precio: $19.99</p>
+          </div>
+        </li>
+        <li class="producto-item" onclick="mostrarReseñas(2)">
+          <img src="imageness/facebook.png" alt="Producto 2">
+          <div class="producto-info">
+            <h2>Nombre del Producto 2</h2>
+            <p>Precio: $24.99</p>
+          </div>
+        </li>
+    
+        <!-- Puedes agregar más productos aquí -->
+    
+      </ul>
+    
+      <div class="reseñas-seccion" id="reseñas-seccion">
+        <h2>Reseñas de Clientes</h2>
+        <div class="reseñas-lista">
+          <!-- Aquí se mostrarán las reseñas -->
+        </div>
+      </div>
+    
+      <script src="script.js"></script>
+    </body>
+    </html>
