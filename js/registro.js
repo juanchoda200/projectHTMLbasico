@@ -10,7 +10,7 @@ class Usuario{
 }
 
 let listUsuarios = [];
-listUsuarios = JSON.parse(localStorage)
+listUsuarios = JSON.parse(localStorage.getItem("listUsuarios"));
 
 const formRegistro = document.getElementById("registro");
 
@@ -29,5 +29,12 @@ formRegistro.addEventListener("submit", function (e) {
     listUsuarios.push(newUsuario);
     console.log(listUsuarios);
 
-    localStorage.setItem()
-})
+    localStorage.setItem("listUsuarios", JSON.stringify(listUsuarios));
+
+    formRegistro.reset();
+    window.location.href = "/login.html";
+});
+
+function mostrarUsuarios(){
+    console.log(listUsuarios);
+}
