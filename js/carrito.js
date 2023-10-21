@@ -67,7 +67,7 @@ function actualizarListaProductos() {
     // Agregar cada producto a la lista en el DOM
     productos.forEach(function(producto) {
         const itemProducto = document.createElement('li');
-        itemProducto.textContent = `${producto.nombre} - $${producto.precio.toFixed(2)}`;
+        itemProducto.textContent = `${producto.nombre} - $${producto.precio}`;
         listaProductos.appendChild(itemProducto);
     });
 }
