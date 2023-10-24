@@ -1,7 +1,9 @@
 // Productos
 const products = [
-    { name: "Producto 1", brand: "Marca 1", price: 100, image: "product1.jpg" },
-    { name: "Producto 2", brand: "Marca 2", price: 200, image: "product2.jpg" },
+    { name: "Cepillos", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
+    { name: "Producto 2", brand: "Marca 2", price: 200, image: "imageness/endo motor radar marca woodpecker.webp" },
+    {name: "Producto 2", brand: "Marca 2", price: 200, image: "product2.jpg" },
+    {name: "Producto 2", brand: "Marca 2", price: 200, image: "product2.jpg" },
   ];
   
   // Carrito de compras
@@ -31,7 +33,7 @@ const products = [
   function updateCart() {
     const cartItems = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
-    cartItems.innerHTML = "";
+    /*cartItems.innerHTML = "";
     let total = 0;
   
     cart.forEach((item, index) => {
@@ -42,7 +44,7 @@ const products = [
     });
   
     cartTotal.textContent = total;
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));*/
   }
   
   // Manejar clic en "Ver detalles"
@@ -62,14 +64,7 @@ const products = [
   }
   
   // Manejar comentarios
-  document.getElementById("add-comment").addEventListener("click", function () {
-    const commentInput = document.getElementById("comment-input");
-    const commentText = commentInput.value;
-    if (commentText.trim() !== "") {
-      addComment(commentText);
-      commentInput.value = "";
-    }
-  });
+ 
   
   // Función para agregar comentarios
   function addComment(commentText) {
@@ -90,3 +85,43 @@ const products = [
     // Actualizar el carrito
     updateCart();
   });
+
+ // Elementos HTML
+const searchInput = document.getElementById("search");
+const searchButton = document.getElementById("search-button");
+const searchResults = document.getElementById("search-results");
+
+
+// Función para realizar la búsqueda
+function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase();
+    searchResults.innerHTML = "";
+
+    if (searchTerm) {
+        const matchingProducts = products.filter(product => {
+            return product.name.toLowerCase().includes(searchTerm)
+        });
+
+        if (matchingProducts.length > 0) {
+            matchingProducts.forEach(product => {
+                const resultItem = document.createElement("div");
+                resultItem.innerHTML = `<h3>${product.name}</h3><p>${product.description}</p>`;
+                searchResults.appendChild(resultItem);
+            });
+        } else {
+            searchResults.innerHTML = "<p>No se encontraron resultados.</p>";
+        }
+    } else {
+        searchResults.innerHTML = "<p>Ingrese un término de búsqueda.</p>";
+    }
+}
+
+// Manejar clic en el botón de búsqueda
+searchButton.addEventListener("click", performSearch);
+
+// Manejar la tecla Enter en el campo de búsqueda
+searchInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        performSearch();
+    }
+});

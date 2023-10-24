@@ -1,5 +1,4 @@
 const formLogin = document.getElementById("login-form");
-const usernameDisplay = document.getElementById("username-display");
 
 formLogin.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -10,27 +9,33 @@ formLogin.addEventListener("submit", function (e) {
   if (verificarCredenciales(username, password)) {
     localStorage.setItem("username", username);
     formLogin.reset();
-    mostrarNombreUsuario();
+    redirigirAlInicio(); // Redirige al usuario a la página de inicio
   } else {
     alert("Credenciales inválidas. Por favor, inténtalo de nuevo.");
   }
 });
 
 function verificarCredenciales(username, password) {
-  if (username === "admin" && password === "admin") {
-    return true;
-  } else {
-    return false;
-  }
+  // Agrega aquí la lógica para verificar las credenciales del usuario (por ejemplo, en localStorage o una base de datos)
+  const user = JSON.parse(localStorage.getItem("listUsuarios"));
+  return user.some(x => x.email === username && x.password === password);
 }
 
+function redirigirAlInicio() {
+  // Redirige al usuario a la página de inicio (cambia "index.html" al nombre de tu página de inicio)
+  window.location.href = "index.html";
+}
+
+// En la página de inicio (index.html), puedes mostrar el nombre del usuario
 function mostrarNombreUsuario() {
   const username = localStorage.getItem("username");
+  const usernameDisplay = document.getElementById("username-display");
 
-  if (username) {
+  if (username && usernameDisplay) {
     usernameDisplay.textContent = `Bienvenido, ${username}!`;
-    // Aquí puedes agregar cualquier otra lógica para mostrar una foto del usuario, etc.
+    // Agrega cualquier lógica adicional para mostrar la foto del usuario u otra información.
   }
 }
 
+// Llama a la función para mostrar el nombre del usuario en la página de inicio
 mostrarNombreUsuario();
