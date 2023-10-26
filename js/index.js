@@ -19,3 +19,6 @@ if (closeButton) {
   if (user) {
     document,getElementById("userName").innerText = user.nombre
   }
+
+
+  
