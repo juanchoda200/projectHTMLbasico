@@ -79,3 +79,18 @@ footer {
     overflow: hidden;
     padding-top: 20px;
 }
+
+@media screen and (min-width: 850px) {
+.productos {
+ margin-left: 0; /* Puedes ajustar los márgenes para alinear los productos */
+    }
+
+.producto {
+width: 200px; /* Cambia el ancho del producto a 200px en pantallas más grandes */
+height: 250px; /* Ajusta la altura de los productos */
+box-shadow: -2px -2px 10px;
+text-align: center;
+    }
+
+    /* Agrega otras reglas para pantallas más grandes según tus necesidades */
+}
