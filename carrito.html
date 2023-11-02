@@ -9,7 +9,7 @@
 <body>
 <header>
     <h1>Carrito de Compras</h1>
-    <img class="img-carrito" src="imageness/carrito-de-compras (3).png" alt="imagen del carrito">
+    <img class="img-carrito" src="imageness/carrito-de-compras (3).png" alt="imagen del carrito" width="50px">
 </header>
 
 <main>
@@ -18,31 +18,21 @@
         <ul id="lista-productos">
             <!-- Aquí se agregarán los productos dinámicamente -->
         </ul>
+        <section class="formas-pago">
+            <h2>Formas de Pago</h2>
+            <p>Selecciona tu forma de pago:</p>
+            <select id="forma-pago" name="forma-pago">
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="paypal">PayPal</option>
     </section>
-
-    <section class="agregar-producto">
-        <h2>Agregar Producto</h2>
-        <form id="formulario-producto">
-            <div>
-                <label for="nombre-producto">Nombre:</label>
-                <input type="text" id="nombre-producto" name="nombre-producto">
-            </div>
-            <div>
-                <label for="precio-producto">Precio:</label>
-                <input type="number" id="precio-producto" name="precio-producto" step="0.01">
-            </div>
-            <button type="submit">Agregar</button>
-        </form>
-    </section>
-
-    <section class="total">
-        <h2>Total</h2>
-        <p id="total"></p>
-    </section>
+</select>
+<button id="pagar">Pagar</button>
+</section>
 </main>
 
 <footer>
-    <button id="boton-compra">Finalizar Compra</button>
+<button id="boton-compra">Finalizar Compra</button>
 </footer>
 
 <script src="./js/carrito.js"></script>

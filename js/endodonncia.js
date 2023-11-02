@@ -1,13 +1,15 @@
 // Productos
 const products = [
-  { id: 1, name: "Cepillos", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
-  { id: 2, name: "Producto 2", brand: "Marca 2", price: 200, image: "imageness/endo motor radar marca woodpecker.webp" },
-  { id: 3, name: "Producto 2", brand: "Marca 2", price: 200, image: "product2.jpg" },
-  {id: 4, name: "Producto 2", brand: "Marca 2", price: 200, image: "product2.jpg" },
+  { id: 0, name: "Cepillos", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
+  { id: 1, name: "Producto 2", brand: "Marca 2", price: 200, image: "imageness/endo motor radar marca woodpecker.webp" },
+  { id: 2, name: "Producto 3", brand: "Marca 2", price: 200, image: "product2.jpg" },
+  {id: 3, name: "Producto 4", brand: "Marca 2", price: 200, image: "product2.jpg" },
 ];
   
 // Carrito de compras
 let cart = [];
+
+localStorage.setItem("listProductos", JSON.stringify(products));
 
 // Función para mostrar productos en la página
 function displayProducts() {
@@ -133,6 +135,7 @@ document.querySelectorAll(".product-container-2").forEach(product=>{
   console.log(product);
   product.addEventListener('click', () => {
     const id = product.getAttribute("id")
+    
     const selectedProduct = products.find(x=>x.id==id)
     localStorage.setItem("PRODUCTO_ACTUAL", JSON.stringify(selectedProduct))
     window.location = "./prevencion-diagnostico.html"

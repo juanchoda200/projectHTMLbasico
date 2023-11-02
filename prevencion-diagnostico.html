@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Producto Ejemplo</title>
-  <link rel="stylesheet" href="ccs/prevencion-diagnostico.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto Ejemplo</title>
+    <link rel="stylesheet" href="ccs/prevencion-diagnostico.css">
 </head>
+
 <body>
     <header>
         <!-- Encabezado modificado -->
@@ -44,9 +46,9 @@
     <div class="product-container">
         <div class="product-details">
             <div class="image-container">
+                <img src="imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" alt="Imagen 0">
                 <img src="imageness/endo motor radar marca woodpecker.webp" alt="Imagen 1">
                 <img src="imageness/diente.png" alt="Imagen 2">
-                <img src="imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" alt="Imagen 3">
             </div>
             <div class="controls">
                 <button id="prev">Anterior</button>
@@ -59,29 +61,42 @@
                 </div>
             </div>
             <div class="right-column">
-                <h1>$50,000</h1>
+                <div class="pricing">
+                  <h1>$50,000</h1>
+                  <p class="discount-price">$45,000</p>
+                </div>
                 <div class="shipping-info">
                     <div class="info-box">
                         <img src="imageness/entrega-rapida.png" alt="Envío a tu dirección o recoger en la tienda">
                         <p>Envío a tu dirección</p>
                     </div>
                 </div>
-                <div class="quantity">
-                    <input type="number" value="1">
+                <div class="shipping-info">
+                    <div class="info-box">
+                        <img src="imageness/entrega-rapida.png" alt="Envío a tu dirección o recoger en la tienda">
+                        <p>Envío a tu dirección</p>
+                    </div>
+                </div>
+                <div class="shipping-info">
+                    <div class="info-box">
+                        <img src="imageness/entrega-rapida.png" alt="Envío a tu dirección o recoger en la tienda">
+                        <p>Envío a tu dirección</p>
+                    </div>
                 </div>
                 <div class="add-to-cart">
-                    <button>Agregar al carrito</button>
+                    <input type="number" value="0" min="0" class="quantity"> <!-- Cantidad con mínimo 0 -->
+                    <button onclick="agregarCarrito()">Agregar al carrito</button>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="add-comment">
         <h2>Deja un comentario</h2>
 
         <div class="review">
             <div class="add-comment-info">
-                <img src="./" alt="Foto del usuario 1">
+                <img src="imageness/usuario.png" alt="Foto del usuario 1">
                 <h3>Nombre del Cliente 1</h3>
             </div>
             <div class="stars">
@@ -96,53 +111,16 @@
                 <input type="checkbox" id="star1" name="rating" value="1">
                 <label for="star1"></label>
             </div>
-            <textarea placeholder="Escribe tu comentario"></textarea>
-            <input type="file" accept="image/*">
-            <button>Publicar comentario</button>
-    </div>
-    <div class="review">
-        <div class="add-comment-info">
-            <img src="./" alt="Foto del usuario 1">
-            <h3>Nombre del Cliente 1</h3>
+            <form id="comentario">
+                <textarea placeholder="Escribe tu comentario" id="comentarioTexto"></textarea>
+                <input type="file" accept="image/*">
+            </form>
+            <button onclick="publicarComentario()">Publicar comentario</button>
+            <div id="seccion-comentarios"></div>
+            <h2>comentarios</h2>
         </div>
-        <div class="stars">
-            <input type="checkbox" id="star5" name="rating" value="5">
-            <label for="star5"></label>
-            <input type="checkbox" id="star4" name="rating" value="4">
-            <label for="star4"></label>
-            <input type="checkbox" id="star3" name="rating" value="3">
-            <label for="star3"></label>
-            <input type="checkbox" id="star2" name="rating" value="2">
-            <label for="star2"></label>
-            <input type="checkbox" id="star1" name="rating" value="1">
-            <label for="star1"></label>
-        </div>
-        <textarea placeholder="Escribe tu comentario"></textarea>
-        <input type="file" accept="image/*">
-        <button>Publicar comentario</button>
-</div>
-<div class="review">
-    <div class="add-comment-info">
-        <img src="./" alt="Foto del usuario 1">
-        <h3>Nombre del Cliente 1</h3>
-    </div>
-    <div class="stars">
-        <input type="checkbox" id="star5" name="rating" value="5">
-        <label for="star5"></label>
-        <input type="checkbox" id="star4" name="rating" value="4">
-        <label for="star4"></label>
-        <input type="checkbox" id="star3" name="rating" value="3">
-        <label for="star3"></label>
-        <input type="checkbox" id="star2" name="rating" value="2">
-        <label for="star2"></label>
-        <input type="checkbox" id="star1" name="rating" value="1">
-        <label for="star1"></label>
-    </div>
-    <textarea placeholder="Escribe tu comentario"></textarea>
-    <input type="file" accept="image/*">
-    <button>Publicar comentario</button>
-</div>
-    </section>
-    <script src="js/prevencion-diagnostico.js"></script>
+        </section>
+        <script src="js/prevencion-diagnostico.js"></script>
 </body>
+
 </html>

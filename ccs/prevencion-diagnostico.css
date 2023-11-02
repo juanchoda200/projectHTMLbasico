@@ -296,3 +296,18 @@ img[src="envio.png"] {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.discount-price {
+    color: #FF0000; /* Color rojo para el precio con descuento */
+}

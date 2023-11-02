@@ -1,5 +1,6 @@
 const commentForm = document.querySelector('.add-comment');
 const commentList = document.querySelector('.comments');
+const listProductos = JSON.parse(localStorage.getItem("listProductos"));
 
 commentForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -64,7 +65,9 @@ searchInput.addEventListener("keyup", function(event) {
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 const images = document.querySelectorAll('.image-container img');
-let currentIndex = 0;
+
+let productoActual = JSON.parse(localStorage.getItem("PRODUCTO_ACTUAL"));
+let currentIndex = productoActual.id;
 
 images[currentIndex].style.display = 'block';
 
@@ -110,8 +113,8 @@ commentButtons.forEach(button => {
     const userComment = commentSection.querySelector('textarea').value;
     const selectedImage = commentSection.querySelector('input[type="file"]').value;
 
-    console.log(`Comentario del usuario: ${userComment}`);
-    console.log(`Imagen seleccionada: ${selectedImage}`);
+    //console.log(`Comentario del usuario: ${userComment}`);
+    //console.log(`Imagen seleccionada: ${selectedImage}`);
     // Guardar el comentario y la imagen en el localStorage si es necesario
   });
 });
@@ -132,3 +135,56 @@ document.addEventListener("click", function (e) {
     }
 });
 
+let productosCarrito = [];
+if(JSON.parse(localStorage.getItem("listProductosCarrito"))){
+    productosCarrito = JSON.parse(localStorage.getItem("listProductosCarrito"));
+}
+
+function agregarCarrito(){
+
+    newProductCarrito = listProductos[currentIndex];
+    productosCarrito.push(newProductCarrito);
+    localStorage.setItem("listProductosCarrito", JSON.stringify(productosCarrito));
+}
+
+let listaComentarios = [];
+if(JSON.parse(localStorage.getItem("listaComentarios"))){
+    listaComentarios = JSON.parse(localStorage.getItem("listaComentarios"));
+}
+
+function publicarComentario(){
+    const comentario = document.getElementById("comentarioTexto").value;
+
+    const divComentario = document.createElement("div");
+    divComentario.innerHTML = `<<img src="imageness/usuario.png" alt="foto del usuario 1" width="100px">
+    <h3>Nombre del Cliente 1</h3>`;
+
+    const parrafoComentario = document.createElement("p")
+    parrafoComentario.textContent = "" + comentario;
+    
+    divComentario.appendChild(parrafoComentario);
+
+    const seccioncomentarios = document.getElementById("seccion-comentarios");
+
+
+    seccioncomentarios.appendChild(divComentario);
+
+    listaComentarios.push(comentario);
+    localStorage.setItem("listaComentarios", JSON.stringify(listaComentarios));
+}
+
+function cargarComentarios() {
+    listaComentarios.forEach(comentario => {
+
+        const divComentario = document.createElement("div");
+        divComentario.innerHTML = `
+            <img src="imageness/user.png" alt="foto del usuario 1" width="100px">
+            <h3>Nombre del Cliente 1</h3>`;
+
+        const parrafoComentario = document.createElement("p");
+        parrafoComentario.textContent = comentario;
+
+        divComentario.appendChild(parrafoComentario);
+        seccioncomentarios.appendChild(divComentario);
+    });
+}

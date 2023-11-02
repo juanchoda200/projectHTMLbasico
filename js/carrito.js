@@ -1,32 +1,27 @@
 // Array de productos
-const products = [
-    { id: 1, name: "Cepillos", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
-    { id: 2, name: "Producto 2", brand: "Marca 2", price: 200, image: "imageness/endo motor radar marca woodpecker.webp" },
-    { id: 3, name: "Producto 2", brand: "Marca 2", price: 200, image: "product2.jpg" },
-    { id: 4, name: "Producto 2", brand: "Marca 2", price: 200, image: "product2.jpg" },
-  ];
-  
+
+let products = JSON.parse(localStorage.getItem("listProductosCarrito"));
   // Carrito de compras
   let cart = [];
+  let productContainer = document.querySelector("#lista-productos");
   
   // Función para mostrar productos en la página
   function displayProducts() {
-    const productContainer = document.querySelector(".product-list");
   
     products.forEach((product, index) => {
-      const productDiv = document.createElement("div");
+      let productDiv = document.createElement("div");
+
       productDiv.classList.add("product", "product-container-2");
       productDiv.setAttribute("id", product.id);
   
       // Muestra la imagen según la propiedad 'image' de cada producto
       productDiv.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.image}" alt="${product.name}" width="100px">  
         <h2>${product.name}</h2>
         <p>Marca: ${product.brand}</p>
         <p>Precio: $${product.price}</p>
-        <button class="add-to-cart" data-index="${index}">Añadir al carrito</button>
+        <button class="add-to-cart" data-index="${index}">Eliminar del Carrito</button>
       `;
-  
       productContainer.appendChild(productDiv);
     });
   }
@@ -45,7 +40,7 @@ const products = [
       total += item.price;
     });
   
-    cartTotal.textContent = total;
+    cartTotal.textContent = ""+total;
     localStorage.setItem("cart", JSON.stringify(cart));
   }
   

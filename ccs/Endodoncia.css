@@ -60,6 +60,11 @@ aside {
     top: 100px;
 }
 
+aside ul {
+    list-style: none; /* Esto elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
 #comments {
     margin: 20px;
     padding: 10px;
@@ -90,7 +95,7 @@ main {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 5px;
-    margin: 10px 0;
+    margin: 20px 0 10px 0;
 }
 
 #search {
