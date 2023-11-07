@@ -154,6 +154,31 @@ li:hover>.submenu {
   color: green;
 }
 
+.contenedor-trabajador {
+  display: flex;
+  width: 800px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+}
+
+.info-personal {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.info-personal img {
+  border-radius: 50%;
+}
+
+.info-profesional {
+  flex: 3;
+  padding: 20px;
+}
+
+p {
+  margin: 5px 0;
+}
 @media screen and (max-width: 850px) {
   ul {
     display: flex;
