@@ -1,40 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./ccs/carrito.css">
-    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="ccs/carrito.css">
+    <title>Document</title>
 </head>
 <body>
-<header>
-    <h1>Carrito de Compras</h1>
-    <img class="img-carrito" src="imageness/carrito-de-compras (3).png" alt="imagen del carrito" width="50px">
-</header>
+    <div class="Carrito">
+        <div class="Header-carrito">
+            <h2>Tu carrito</h2>
+        </div>
 
-<main>
-    <section class="productos">
-        <h2>Productos en el carrito</h2>
-        <ul id="lista-productos">
-            <!-- Aquí se agregarán los productos dinámicamente -->
-        </ul>
-        <section class="formas-pago">
-            <h2>Formas de Pago</h2>
-            <p>Selecciona tu forma de pago:</p>
-            <select id="forma-pago" name="forma-pago">
-                <option value="visa">Visa</option>
-                <option value="mastercard">Mastercard</option>
-                <option value="paypal">PayPal</option>
-    </section>
-</select>
-<button id="pagar">Pagar</button>
-</section>
-</main>
+        <div class="carrito-items">
+            <div class="carrito-item">
+                <img src="imageness/endo motor radar marca woodpecker.webp" alt="" width="80px">
+                <div class="carrito-item-detalles">
+                    <span class="carrito-item-titulo">Denatal House</span>
+                    <div class="selector-cantidad"></div>
+                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                </div>
+                <span class="carrito-item-precio">$25.000</span>
+            </div>  
+            <sapn class="btn-eliminar">
+                <i class="fa-solid fa-trash"></i>
+            </sapn>
+        </div>
 
-<footer>
-<button id="boton-compra">Finalizar Compra</button>
-</footer>
+        <div class="carrito-items">
+            <div class="carrito-item">
+                <img src="imageness/endo motor radar marca woodpecker.webp" alt="" width="80px">
+                <div class="carrito-item-detalles">
+                    <span class="carrito-item-titulo">Denatal House</span>
+                    <div class="selector-cantidad"></div>
+                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                </div>
+                <span class="carrito-item-precio">$25.000</span>
+            </div>  
+            <sapn class="btn-eliminar">
+                <i class="fa-solid fa-trash"></i>
+            </sapn>
+        </div>
 
-<script src="./js/carrito.js"></script>
+        <div class="carrito-items">
+            <div class="carrito-item">
+                <img src="imageness/endo motor radar marca woodpecker.webp" alt="" width="80px">
+                <div class="carrito-item-detalles">
+                    <span class="carrito-item-titulo">Denatal House</span>
+                    <div class="selector-cantidad"></div>
+                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                </div>
+                <span class="carrito-item-precio">$25.000</span>
+            </div>  
+            <sapn class="btn-eliminar">
+                <i class="fa-solid fa-trash"></i>
+            </sapn>
+        </div>
+
+        <div class="class-carrito-total">
+            <div class="fila">
+                <strong>Tu Total</strong>
+                <span class="class-carrito-precio-total">
+                    $120.000.00
+                </span>
+            </div>
+            <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i>/button>
+        </div>
+    </div>
 </body>
 </html>

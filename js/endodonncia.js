@@ -1,9 +1,9 @@
 // Productos
 const products = [
-  { id: 0, name: "Cepillos", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
-  { id: 1, name: "Producto 2", brand: "Marca 2", price: 200, image: "imageness/endo motor radar marca woodpecker.webp" },
-  { id: 2, name: "Producto 3", brand: "Marca 2", price: 200, image: "product2.jpg" },
-  {id: 3, name: "Producto 4", brand: "Marca 2", price: 200, image: "product2.jpg" },
+  { id: 0, name: "XILOL DISOLVENTE GUTAPERCHA", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
+  { id: 1, name: "WHITE POST REFIL 0.5", brand: "Marca 2", price: 200, image: "imageness/endo motor radar marca woodpecker.webp" },
+  { id: 2, name: "VIOSEAL CEMENTO DUAL X 3GR", brand: "Marca 2", price: 200, image: "product2.jpg" },
+  {id: 3, name: "VIOSEAL CEMENTO CANAL RADIC", brand: "Marca 2", price: 200, image: "product2.jpg" },
 ];
   
 // Carrito de compras
