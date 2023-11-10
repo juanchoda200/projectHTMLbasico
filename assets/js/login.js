@@ -26,4 +26,3 @@ function redirigirAlInicio() {
   localStorage.setItem("login", true);
   window.location.href = "index.html";
 }
-
