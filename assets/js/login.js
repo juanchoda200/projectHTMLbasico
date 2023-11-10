@@ -23,19 +23,7 @@ function verificarCredenciales(username, password) {
 
 function redirigirAlInicio() {
   // Redirige al usuario a la página de inicio (cambia "index.html" al nombre de tu página de inicio)
+  localStorage.setItem("login", true);
   window.location.href = "index.html";
 }
 
-// En la página de inicio (index.html), puedes mostrar el nombre del usuario
-function mostrarNombreUsuario() {
-  const username = localStorage.getItem("username");
-  const usernameDisplay = document.getElementById("username-display");
-
-  if (username && usernameDisplay) {
-    usernameDisplay.textContent = `Bienvenido, ${username}!`;
-    // Agrega cualquier lógica adicional para mostrar la foto del usuario u otra información.
-  }
-}
-
-// Llama a la función para mostrar el nombre del usuario en la página de inicio
-mostrarNombreUsuario();

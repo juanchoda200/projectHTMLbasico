@@ -15,7 +15,7 @@
   <meta name="keywords" content="odontología, insumos, equipos, productos, precio, envío, ventas">
   <title>Dental House</title>
   <add style="text-align:center ;">
-    <link rel="stylesheet" href="./ccs/boton.css">
+    <link rel="stylesheet" href="./assets/ccs/boton.css">
 
 
 
@@ -26,7 +26,7 @@
 <body>
   <header>
     <div class="contenedor-izq">
-      <img src="imageness/file.png " class="imagen">
+      <img src="assets/imageness/file.png" class="imagen">
     </div>
     <i class="navbar__toggle" id="menu-toggle">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="35" height="35"
@@ -54,21 +54,27 @@
       <ul>
         <li><a href="./index.html">Inicio</a></li>
         <li>
-          <a href="./quienessomos..html">Nosotros</a>
+          <a href="assets/views/quienessomos.html">Nosotros</a>
           <ul class="submenu">
             <li><a href="#">vacantes</a></li>
           </ul>
         </li>
         <li>
-          <a href="./productos.html">Productos</a>
-      </li>
-      <li><a href="./Contacto.html">Contacto</a></li>
-      <li>
-        <a href="./login.html"><img src="./imageness/acceso.png" alt="inicio"></a>
-      </li>
-      <li>
-        <a href="./carrito.html"><img src="./imageness/carrito-de-compras (2).png" alt="Carrito de compras"></a>
-      </li>
+          <a href="assets/views/productos.html">Productos</a>
+        </li>
+        <li><a href="assets/views/Contacto.html">Contacto</a></li>
+        <li id="login-item">
+          <a href="assets/views/login.html"><img src="assets/imageness/acceso.png" alt="inicio"></a>
+        </li>
+
+        <li>
+          <a href="assets/views/carrito.html"><img src="assets/imageness/carrito-de-compras (2).png" alt="Carrito de compras"></a>
+        </li>
+        <div id="user-info" class="user-info" style="display: none;">
+          <p id="username-display"></p>
+          <img id="user-image" src="assets/imageness/usuario.png" alt="User Image" width="30">
+          <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
       </ul>
     </div>
     <p id="username"></p>
@@ -80,25 +86,25 @@
   </div>
 
   <div class="container-banner">
-    <img src="imageness/file.png" alt="Banner">
+    <img src="assets/imageness/file.png" alt="Banner">
   </div>
   <h1>Productos Mas Vendidos</h1>
 
   <div class="product-container">
     <div class="product">
-      <img src="imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" alt="Producto 1" class="imagen">
+      <img src="assets/imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" alt="Producto 1" class="imagen">
       <h3>Producto 1</h3>
       <p>$99.99</p>
       <button>Agregar al carrito</button>
     </div>
     <div class="product">
-      <img src="imageness/instagram.png" alt="Producto 2" class="imagen">
+      <img src="assets/imageness/instagram.png" alt="Producto 2" class="imagen">
       <h3>Producto 2</h3>
       <p>$79.99</p>
       <button>Agregar al carrito</button>
     </div>
     <div class="product">
-      <img src="imageness/whattsap.png" alt="Producto 3" class="imagen">
+      <img src="assets/imageness/whattsap.png" alt="Producto 3" class="imagen">
       <h3>Producto 3</h3>
       <p>$149.99</p>
       <button>Agregar al carrito</button>
@@ -113,7 +119,7 @@
     <p>Somos un negocio que se dedica a la venta y compra de insumos odontologicos que vende por todo
       colombia Llamanos estaremos espero</p>
   </div>
-  <img src="imageness/file.png" alt="">
+  <img src="assets/imageness/file.png" alt="">
 </main>
 
 
@@ -171,6 +177,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/index.js"></script>
+  <script src="assets/js/index.js"></script>
 
 </body>

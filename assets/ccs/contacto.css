@@ -12,8 +12,6 @@ body {
   .izquierda {
     width: 50%;
     padding: 20px;
-    border-radius: 50%;
-    background-color: #f2f2f2;
     text-align: left; /* Alineación a la izquierda */
   }
   
@@ -75,3 +73,13 @@ body {
     margin: -9px 0px 0px 0px;
     padding: 0px 0px 20px 0px;
   }
+
+  .Ceste {
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+  
