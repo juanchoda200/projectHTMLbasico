@@ -1,54 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dental House</title>
   <link rel="stylesheet" href="../ccs/contacto.css">
   <link rel="stylesheet" href="../ccs/boton.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
 </head>
+
 <body>
-  <h1 class="titulo-principal">Contáctenos</h1>
+  <header>
+    <div class="contenedor-izq">
+      <img src="../imageness/file.png" class="imagen">
+    </div>
+    <i class="navbar__toggle" id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="35" height="35"
+        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M14 4h6v6h-6z"></path>
+        <path d="M4 14h6v6h-6z"></path>
+        <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+        <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+      </svg>
+    </i>
 
-  <div class="contactanos">
-    <div class="izquierda">
-      <div class="formulario-ayuda">
-        <h1 class="Ceste">Complete este formulario para Ayudarlo en su solicitud</h1>
-        <form action="" id="MiFormulario">
-          <div class="form-group">
-            <h1 class="Ceste">Complete este formulario para Ayudarlo en su solicitud</h1>
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-          </div>
-          <div class="form-group">
-              <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-          </div>
-          <div class="form-group">
-              <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
-          </div>
-          <div class="form-group">
-              <input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
-          </div>
-          <div class="form-group">
-              <input type="text" class="form-control" id="asunto" placeholder="Asunto">
-          </div>
-          <div class="form-group">
-              <textarea class="form-control" id="descripcion" placeholder="Mensaje" rows="5"></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Enviar</button>
-      </form>
-        </form>
+    <div class="contenedor-der" id="menu">
+      <i class="navbar__close" id="menu-cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="35" height="35"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M18 6l-12 12"></path>
+          <path d="M6 6l12 12"></path>
+        </svg>
+      </i>
+
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li>
+          <a href="assets/views/quienessomos..html">Nosotros</a>
+          <ul class="submenu">
+            <li><a href="#">vacantes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="assets/views/productos.html">Productos</a>
+        </li>
+        <li><a href="assets/views/Contacto.html">Contacto</a></li>
+        <li id="login-item">
+          <a href="assets/views/login.html"><img src="assets/imageness/acceso.png" alt="inicio"></a>
+        </li>
+
+        <li>
+          <a href="assets/views/carrito.html"><img src="assets/imageness/carrito-de-compras (2).png" alt="Carrito de compras"></a>
+        </li>
+        <div id="user-info" class="user-info" style="display: none;">
+          <p id="username-display"></p>
+          <img id="user-image" src="assets/imageness/usuario.png" alt="User Image" width="30">
+          <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+      </ul>
+    </div>
+    <p id="username"></p>
+  </header>
+
+  <div class="container">
+    <img src="" alt="Banner Image">
+    <form>
+      <h2>Complete este formulario para Ayudarlo en su solicitud</h2>
+
+      <div class="input-group">
+        <label for="names">Nombres</label>
+        <input type="text" name="names" id="names" placeholder="Nombres">
+
+        <label for="surnames">Apellidos</label>
+        <input type="text" name="surnames" id="surnames" placeholder="Apellidos">
+
+        <label for="email">Correo Electrónico</label>
+        <input type="email" name="email" id="email" placeholder="Correo Electrónico">
+
+        <label for="Phone">Número de Celular</label>
+        <input type="tel" name="Phone" id="Phone" placeholder="Número de Celular">
+
+        <label for="city">Ciudad</label>
+        <input type="text" name="city" id="city" placeholder="Ciudad">
+
+        <label for="message">Asunto</label>
+        <textarea name="message" id="message" cols="30" rows="5" placeholder="Asunto"></textarea>
       </div>
-    </div>
 
-    <div class="derecha">
-      <h2 class="sede">Nuestras sedes</h2>
-      <h2>Bogotá</h2>
-      <div id="map" style="height: 400px; width: 100%;"></div>
-    </div>
+      <div class="form-text">
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
+
+      <input type="submit" value="Enviar">
+    </form>
   </div>
-  <iframe src="https://www.google.com/maps/@4.5726943,-74.0927036,3a,75y,214.82h,93.92t/data=!3m6!1e1!3m4!1sJ1a_JHvE4dEbDEhqNtOwtw!2e0!7i16384!8i8192?hl=es&entry=ttu" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+
   <script src="../js/Contacto.js"></script>
 </body>
+
 </html>

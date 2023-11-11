@@ -76,6 +76,13 @@ li:hover>.submenu {
     color: green;
 }
 
+.PMV{
+    color: #51893a;
+    font-size: 2em;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-weight: 700;
+}
 @media screen and (max-width: 480px) {
     ul {
         display: flex;
