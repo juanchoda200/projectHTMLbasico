@@ -14,11 +14,11 @@ body {
 header {
   height: 90px;
   width: 100%;
-  background-color: #51893a;
+  background-color: #ADD8E6;
 }
 
 .menu li:hover a {
-  background-color: #51893a;
+  background-color: #ADD8E6;
   color: #191c32;
 }
 
@@ -51,7 +51,7 @@ h1 {
 }
 
 footer {
-  background-color: #51893a;
+  background-color: #ADD8E6;
   color: white;
   padding: 10px 0px 0px 0xp;
 }
@@ -81,7 +81,7 @@ footer {
 
 .footer-derechos {
   text-align: center;
-  background-color: #51893a;
+  background-color: #ADD8E6;
   padding: 10px 0px;
 }
 
