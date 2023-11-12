@@ -1,8 +1,8 @@
 // Productos
 const products = [
   { id: 0, name: "ZIRCONFILL EA 1", brand: "Marca 1", price: 3000, image: "../imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
-  { id: 1, name: "ZIRCONFILL E A3", brand: "Marca 2", price: 200, image: "../imageness/endo motor radar marca woodpecker.webp" },
-  { id: 2, name: "ZIRCONFILL E A2", brand: "Marca 2", price: 200, image: "../imageness/endo motor radar marca woodpecker.webp" },
+  {  id: 1,name: "ZIRCONFILL E A3", brand: "Marca 2",price: 200, image: "../imageness/Screenshot_20231111-172418.jpg"},  
+  { id: 2, name: "ZIRCONFILL E A2", brand: "Marca 2", price: 200, image: "../imageness/PhotoRoom-20231111_180032.png" },
   {id: 3, name: "ZIRCONFILL D BLEACH BM4", brand: "Marca 2", price: 200, image: "../imageness/endo motor radar marca woodpecker.webp" },
   {id: 3, name: "ZIRCONFILL D B1 BM4", brand: "Marca 2", price: 200, image: "../imageness/endo motor radar marca woodpecker.webp" },
   {id: 3, name: "ZIRCONFILL D A2 BM4", brand: "Marca 2", price: 200, image: "../imageness/endo motor radar marca woodpecker.webp" },
