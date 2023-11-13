@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  min-height: 100vh;
+  min-height: 100px;
   justify-content: center;
   align-items: center;
 }
@@ -61,26 +61,73 @@ input, textarea {
 }
 
 .banner {
-  form {
+position: relative;
+width: 100%;
+height: calc(108vh - 50px);
+background-image: url(../imageness/pexels-pixabay-326576.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.capa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contenido {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.contenido h1 {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.contenido .button {
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 9px 20px;
+  text-transform: uppercase;
+  border: 1px solid #FFFFFF;
+  transition: all .3s ease-in-out;
+  width: 150px;
+}
+
+form {
     width: 100%;
+    
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     text-align: center;
     padding: 20px;
     margin-bottom: 20px; /* Espacio entre el banner y el formulario */
   }
-}  
-
-.banner img {
-  max-width: 100px;
-  height: auto;
-}
-
-
+  
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 800px; /* Ajusta según sea necesario */
   width: 100%;
+}
+
+.form2 {
+  width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio entre el banner y el formulario */
 }

@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #51893a;
+    background-color: #ADD8E6;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@ header input[type="text"] {
 
 .product-list {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(9,1fr);
 }
 
 .product {
@@ -45,7 +45,7 @@ header input[type="text"] {
 }
 
 button.view-details {
-    background-color: #ff9900;
+    background-color: #007bff;
     color: #fff;
     border: none;
     padding: 5px 10px;

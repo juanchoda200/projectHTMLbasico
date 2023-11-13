@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #51893a;
+    background-color:#ADD8E6;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@ header input[type="text"] {
 }
 
 button.view-details {
-    background-color: #007bff;
+    background-color: #ff9900;
     color: #fff;
     border: none;
     padding: 5px 10px;

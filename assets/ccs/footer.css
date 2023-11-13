@@ -1,6 +1,6 @@
 .footer{
     background-color: #ADD8E6;
-    color: white;
+    color: black;
     padding: 10px 0px 0px 0xp;
 }
 
@@ -30,7 +30,12 @@
 .footer-derechos{
     text-align: center;
     background-color: #ADD8E6;
+    color: black;
     padding: 10px 0px;
+}
+
+.corre {
+    color: black;
 }
 
 @media screen and (max-width: 480px) {

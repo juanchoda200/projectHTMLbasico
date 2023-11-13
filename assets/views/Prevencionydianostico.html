@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto Ejemplo</title>
+    <link rel="stylesheet" href="../ccs/prevencion-diagnostico.css">
+</head>
+
+<body>
+    <header>
+        <!-- Encabezado modificado -->
+        <div class="logo">
+            <img src="../imageness/file.png" alt="Logo de la tienda">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar productos...">
+            <button id="search-button">
+                <img src="../imageness/buscar.png" alt="Icono de búsqueda" class="search-icon">
+            </button>
+            <div id="search-results"></div>
+        </div>
+        <div class="user-actions">
+            <a href="./login.html"><img src="../imageness/acceso.png" alt="Iniciar sesión"></a>
+            <a href="./carrito.html"><img src="../imageness/carrito-de-compras (2).png" alt="Carrito de compras"></a>
+        </div>
+    </header>
+    </header>
+    <hr class="divider">
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Operatoria Dental</a></li>
+            <li><a href="#">Endodoncia</a></li>
+            <li><a href="#">Periodoncia</a></li>
+            <li><a href="#">Cirugía Oral</a></li>
+            <li><a href="#">Ortodoncia</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Prótesis Dental</a></li>
+        </ul>
+    </nav>
+    <div class="inicio-marca">
+        <a href="#">Inicio Marca</a>
+    </div>
+    <h1>Nombre del Producto</h1>
+    <div class="product-container">
+        <div class="product-details">
+            <div class="image-container">
+                <img src="../imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" alt="Imagen 0">
+                <img src="../imageness/endo motor radar marca woodpecker.webp" alt="Imagen 1">
+                <img src="../imageness/diente.png" alt="Imagen 2">
+            </div>
+            <div class="controls">
+                <button id="prev">Anterior</button>
+                <button id="next">Siguiente</button>
+            </div>
+        </div>
+        <div class="product-info">
+            <div class="left-column">
+                <div class="image-container">
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="pricing">
+                  <h1>$50,000</h1>
+                  <p class="discount-price">$45,000</p>
+                </div>
+                <div class="shipping-info">
+                    <div class="info-box">
+                        <img src="../imageness/entrega-rapida.png" alt="Envío a tu dirección o recoger en la tienda">
+                        <p>Envío a tu dirección</p>
+                    </div>
+                </div>
+                <div class="shipping-info">
+                    <div class="info-box">
+                        <img src="../imageness/entrega-rapida.png" alt="Envío a tu dirección o recoger en la tienda">
+                        <p>Envío a tu dirección</p>
+                    </div>
+                </div>
+                <div class="shipping-info">
+                    <div class="info-box">
+                        <img src="../imageness/entrega-rapida.png" alt="Envío a tu dirección o recoger en la tienda">
+                        <p>Envío a tu dirección</p>
+                    </div>
+                </div>
+                <div class="add-to-cart">
+                    <input type="number" value="0" min="0" class="quantity"> <!-- Cantidad con mínimo 0 -->
+                    <button onclick="agregarCarrito()">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-comment">
+        <h2>Deja un comentario</h2>
+
+        <div class="review">
+            <div class="add-comment-info">
+                <img src="../imageness/usuario.png" alt="Foto del usuario 1">
+                <h3>Nombre del Cliente 1</h3>
+            </div>
+            <div class="stars">
+                <input type="checkbox" id="star5" name="rating" value="5">
+                <label for="star5"></label>
+                <input type="checkbox" id="star4" name="rating" value="4">
+                <label for="star4"></label>
+                <input type="checkbox" id="star3" name="rating" value="3">
+                <label for="star3"></label>
+                <input type="checkbox" id="star2" name="rating" value="2">
+                <label for="star2"></label>
+                <input type="checkbox" id="star1" name="rating" value="1">
+                <label for="star1"></label>
+            </div>
+            <form id="comentario">
+                <textarea placeholder="Escribe tu comentario" id="comentarioTexto"></textarea>
+                <input type="file" accept="image/*">
+            </form>
+            <button onclick="publicarComentario()">Publicar comentario</button>
+            <div id="seccion-comentarios"></div>
+            <h2>comentarios</h2>
+        </div>
+        </section>
+        <script src="../js/prevencion-diagnostico.js"></script>
+</body>
+
+</html>
