@@ -152,39 +152,101 @@ if(JSON.parse(localStorage.getItem("listaComentarios"))){
     listaComentarios = JSON.parse(localStorage.getItem("listaComentarios"));
 }
 
-function publicarComentario(){
-    const comentario = document.getElementById("comentarioTexto").value;
+const seccioncomentarios = document.getElementById("seccion-comentarios");
 
-    const divComentario = document.createElement("div");
-    divComentario.innerHTML = `<<img src="imageness/usuario.png" alt="foto del usuario 1" width="100px">
-    <h3>Nombre del Cliente 1</h3>`;
+function publicarComentario() {
+    const comentarioTexto = document.getElementById("comentarioTexto").value;
+    const nombreUsuario = prompt("Ingresa tu nombre:");
 
-    const parrafoComentario = document.createElement("p")
-    parrafoComentario.textContent = "" + comentario;
-    
-    divComentario.appendChild(parrafoComentario);
+    if (comentarioTexto && nombreUsuario) {
+        const divComentario = document.createElement("div");
+        divComentario.className = "user-comment";
 
-    const seccioncomentarios = document.getElementById("seccion-comentarios");
+        // Agregar la imagen del usuario
+        const imagenUsuario = document.createElement("img");
+        imagenUsuario.src = "imageness/usuario.png";
+        imagenUsuario.alt = "foto del usuario";
+        imagenUsuario.width = 50;
+        divComentario.appendChild(imagenUsuario);
 
+        // Agregar el nombre del usuario
+        const nombreUsuarioElemento = document.createElement("h3");
+        nombreUsuarioElemento.textContent = nombreUsuario;
+        divComentario.appendChild(nombreUsuarioElemento);
 
-    seccioncomentarios.appendChild(divComentario);
+        // Agregar el texto del comentario
+        const parrafoComentario = document.createElement("p");
+        parrafoComentario.textContent = comentarioTexto;
+        divComentario.appendChild(parrafoComentario);
 
-    listaComentarios.push(comentario);
-    localStorage.setItem("listaComentarios", JSON.stringify(listaComentarios));
+        // Agregar botón de eliminación
+        const botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "Eliminar";
+        botonEliminar.addEventListener("click", function () {
+            eliminarComentario(divComentario);
+        });
+        divComentario.appendChild(botonEliminar);
+
+        seccioncomentarios.appendChild(divComentario);
+
+        const nuevoComentario = {
+            nombre: nombreUsuario,
+            comentario: comentarioTexto
+        };
+
+        listaComentarios.push(nuevoComentario);
+
+        // Guardar la lista actualizada en el almacenamiento local
+        localStorage.setItem("listaComentarios", JSON.stringify(listaComentarios));
+    } else {
+        alert("Por favor, ingresa tu nombre y comentario antes de publicar.");
+    }
 }
 
 function cargarComentarios() {
-    listaComentarios.forEach(comentario => {
-
+    listaComentarios.forEach((comentario, index) => {
         const divComentario = document.createElement("div");
-        divComentario.innerHTML = `
-            <img src="imageness/user.png" alt="foto del usuario 1" width="100px">
-            <h3>Nombre del Cliente 1</h3>`;
+        divComentario.className = "user-comment";
 
+        // Agregar la imagen del usuario
+        const imagenUsuario = document.createElement("img");
+        imagenUsuario.src = "imageness/usuario.png";
+        imagenUsuario.alt = "foto del usuario";
+        imagenUsuario.width = 50;
+        divComentario.appendChild(imagenUsuario);
+
+        // Agregar el nombre del usuario
+        const nombreUsuarioElemento = document.createElement("h3");
+        nombreUsuarioElemento.textContent = comentario.nombre;
+        divComentario.appendChild(nombreUsuarioElemento);
+
+        // Agregar el texto del comentario
         const parrafoComentario = document.createElement("p");
-        parrafoComentario.textContent = comentario;
-
+        parrafoComentario.textContent = comentario.comentario;
         divComentario.appendChild(parrafoComentario);
+
+        // Agregar botón de eliminación
+        const botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "Eliminar";
+        botonEliminar.addEventListener("click", function () {
+            eliminarComentario(divComentario, index);
+        });
+        divComentario.appendChild(botonEliminar);
+
         seccioncomentarios.appendChild(divComentario);
     });
 }
+
+function eliminarComentario(elemento, index) {
+    // Eliminar el comentario del DOM
+    elemento.remove();
+
+    // Eliminar el comentario del array
+    listaComentarios.splice(index, 1);
+
+    // Guardar la lista actualizada en el almacenamiento local
+    localStorage.setItem("listaComentarios", JSON.stringify(listaComentarios));
+}
+
+// Cargar comentarios al cargar la página
+cargarComentarios();

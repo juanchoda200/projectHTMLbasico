@@ -22,12 +22,12 @@ form {
 }
 
 h2 {
-  color: #51893a;
+  color: #ff9900;
   font-size: 19px;
 }
 
 label {
-  color: #51893a;
+  color: #ff9900;
   font-size: 19px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -41,7 +41,7 @@ input, textarea {
   margin-bottom: 20px;
   background-color: #FFFFFF;
   border: #FFFFFF;
-  color: #51893a;
+  color: #ff9900;
   outline: none;
   width: 100%; /* O ajusta según sea necesario */
 }
@@ -63,7 +63,7 @@ input, textarea {
 .banner {
 position: relative;
 width: 100%;
-height: calc(108vh - 50px);
+height: 100vh;
 background-image: url(../imageness/pexels-pixabay-326576.jpg);
 background-position: center;
 background-repeat: no-repeat;
@@ -116,11 +116,13 @@ form {
   }
   
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px; /* Ajusta según sea necesario */
-  width: 100%;
+  height: 300px;
+  width: 1200px;
+  height: 245px;
 }
 
 .form2 {

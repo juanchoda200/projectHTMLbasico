@@ -3,21 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./ccs/carrito.css">
-    <title>Carrito de Compras</title>
+    <link rel="stylesheet" type="text/css" href="../ccs/carrito.css">
+    <title>Carrito Dental</title>
 </head>
 <body>
-<header>
-    <h1>Carrito de Compras</h1>
-    <img class="img-carrito" src="imageness/carrito-de-compras (3).png" alt="imagen del carrito" width="50px">
-</header>
+    <header>
+        <div class="contenedor-izq">
+            <img src="../imageness/DentalLogo.webp" class="imagen">
+        </div>
+        <i class="navbar__toggle" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="35" height="35"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M14 4h6v6h-6z"></path>
+                <path d="M4 14h6v6h-6z"></path>
+                <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            </svg>
+        </i>
 
-<main>
-    <section class="productos">
-        <h2>Productos en el carrito</h2>
-        <ul id="lista-productos">
-            <!-- Aquí se agregarán los productos dinámicamente -->
-        </ul>
+        <div class="contenedor-der" id="menu">
+            <i class="navbar__close" id="menu-cerrar">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="35" height="35"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M18 6l-12 12"></path>
+                    <path d="M6 6l12 12"></path>
+                </svg>
+            </i>
+
+            <ul>
+                <li><a href=".index.html">Inicio</a></li>
+                <li>
+                    <a href="../views/quienessomos.html">Nosotros</a>
+                    <ul class="submenu">
+                        <li><a href="#">vacantes</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../views/productos.html">Productos</a>
+                </li>
+                <li><a href="../views/Contacto.html">Contacto</a></li>
+                <li id="login-item">
+                    <a href="../views/login.html"><img src="../imageness/acceso.png" alt="inicio"></a>
+                </li>
+
+                <li>
+                    <a href="../views/carrito.html"><img src="../imageness/carrito-de-compras (4).png"
+                            alt="Carrito de compras"></a>
+                </li>
+                <div id="user-info" class="user-info" style="display: none;">
+                    <p id="username-display"></p>
+                    <img id="user-image" src="../imageness/acceso.png" alt="User Image" width="30">
+                    <button onclick="cerrarSesion()">Cerrar Sesión</button>
+                </div>
+            </ul>
+        </div>
+        <p id="username"></p>
+    </header>
+
+    <main>
         <section class="formas-pago">
             <h2>Formas de Pago</h2>
             <p>Selecciona tu forma de pago:</p>
@@ -25,16 +72,34 @@
                 <option value="visa">Visa</option>
                 <option value="mastercard">Mastercard</option>
                 <option value="paypal">PayPal</option>
-    </section>
-</select>
-<button id="pagar">Pagar</button>
-</section>
-</main>
+            </select>
+            <button id="pagar">Pagar</button>
+        </section>
 
-<footer>
-<button id="boton-compra">Finalizar Compra</button>
-</footer>
+        <div class="container">
+            <h1>Compra con Tarjeta</h1>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="cardNumber">Número de tarjeta</label>
+                    <input type="text" id="cardNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">Fecha de vencimiento</label>
+                    <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="password" id="cvv" maxlength="3" required>
+                </div>
+                <button type="submit" id="buyButton">Comprar</button>
+            </form>
+        </div>
+    </main>
 
-<script src="./js/carrito.js"></script>
+    <footer>
+        <button id="boton-compra">Finalizar Compra</button>
+    </footer>
+
+    <script src="../js/carrito.js"></script>
 </body>
 </html>
