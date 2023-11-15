@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #ADD8E6;;
+    background-color: #ADD8E6;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -80,7 +80,7 @@ nav li a {
 }
 
 footer {
-    background-color: #51893a;
+    background-color: #ADD8E6;
     padding: 20px;
     text-align: center;
 }
@@ -117,6 +117,116 @@ footer {
     text-decoration: none;
     color: blue;
 }
+
+.cuadro {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.imagen {
+    max-width: 100%; /* la imagen ocupará el 100% del ancho del contenedor */
+    height: auto; /* la altura se ajustará automáticamente para mantener la proporción original */
+    display: block;
+    margin: 0 auto;
+}
+
+.color-info{
+    color:black;
+    background: linear-gradient(45deg, #fff, #fff);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.color-resin{
+    color:black;
+    background: linear-gradient(45deg, #fff, #fff);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px 0 10px 0;
+}
+
+#search {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#search-button {
+    background: #ff9900;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ADD8E6;
+    color: black;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    flex-direction: row; /* Modificado para alinear elementos en fila */
+  }
+  
+  .footer-derechos,
+  .footer-info,
+  .footer-logo {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .footer-derechos_text,
+  .footer-info_text,
+  .footer-logo_text {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: black; /* Cambiado a verde, ajusta según sea necesario */
+  }
+  
+  .footer-derechos a,
+  .footer-info a,
+  .footer-logo a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer-derechos a:hover,
+  .footer-info a:hover,
+  .footer-logo a:hover {
+    color: #ff9900; /* Cambiado a rojo, ajusta según sea necesario */
+  }
 
 @media screen and (min-width: 850px) {
 .productos {

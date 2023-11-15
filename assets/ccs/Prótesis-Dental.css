@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #51893a;
+    background-color: #ADD8E6;;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,6 @@ button.view-details {
 
 aside {
     margin: 20px;
-    border: 1px solid #ccc;
     padding: 10px;
     position: sticky;
     top: 100px;

@@ -24,7 +24,7 @@ header input[type="text"] {
 
 .product-list {
     display: grid;
-    grid-template-columns: repeat(9,1fr);
+    grid-template-columns: repeat(6,1fr);
 }
 
 .product {
