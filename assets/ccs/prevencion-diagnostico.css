@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #51893a;
+  background-color:#ADD8E6;
   color: #fff;
   padding: 10px 0;
   display: flex;
@@ -55,7 +55,7 @@ header {
 
 .divider {
   border: none;
-  border-top: 2px solid green;
+  border-top: 2px solid #ff9900;
   margin: 10px 0;
 }
 
@@ -141,7 +141,7 @@ img[src="envio.png"] {
 }
 
 .menu {
-  background-color: #51893a;
+  background-color: #ADD8E6;
   color: #fff;
   padding: 10px 0;
 }

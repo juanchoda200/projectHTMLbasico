@@ -8,4 +8,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
         mensajeVacantes.innerText = 'En este momento no hay vacantes.';
     }
 });
-```

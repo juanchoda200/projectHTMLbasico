@@ -48,7 +48,7 @@ a {
     transition: color 0.3s ease;
 }
 a:hover {
-    color: #333;
+    color: #000000;
 }
 
 .submenu {
@@ -71,9 +71,8 @@ li:hover>.submenu {
 }
 
 .submenu a {
-    color: white;
+    color: #000000;
     text-decoration: none;
-
 }
 
 .submenu li:hover a {
@@ -81,7 +80,7 @@ li:hover>.submenu {
 }
 
 .PMV{
-    color: #ADD8E6;
+    color: #000000
     font-size: 2em;
     margin-bottom: 10px;
     line-height: 1.5;
