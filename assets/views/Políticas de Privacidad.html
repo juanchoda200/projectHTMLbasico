@@ -26,7 +26,7 @@
 <body>
   <header>
     <div class="contenedor-izq">
-      <img src="../imageness/file.png" class="imagen">
+      <img src="assets/imageness/file.png" class="imagen">
     </div>
     <i class="navbar__toggle" id="menu-toggle">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="35" height="35"
@@ -54,7 +54,7 @@
       <ul>
         <li><a href="./index.html">Inicio</a></li>
         <li>
-          <a href="../views/quienessomos.html">Nosotros</a>
+          <a href="assets/views/quienessomos.html">Nosotros</a>
           <ul class="submenu">
             <li><a href="#">vacantes</a></li>
           </ul>
@@ -80,44 +80,3 @@
     </div>
     <p id="username"></p>
   </header>
-
-    <main>
-        <section class="formas-pago">
-            <h2>Formas de Pago</h2>
-            <p>Selecciona tu forma de pago:</p>
-            <select id="forma-pago" name="forma-pago">
-                <option value="visa">Visa</option>
-                <option value="mastercard">Mastercard</option>
-                <option value="paypal">PayPal</option>
-            </select>
-            <button id="pagar">Pagar</button>
-        </section>
-
-        <div class="container">
-            <h1>Compra con Tarjeta</h1>
-            <form id="paymentForm">
-                <div class="form-group">
-                    <label for="cardNumber">Número de tarjeta</label>
-                    <input type="text" id="cardNumber" required>
-                </div>
-                <div class="form-group">
-                    <label for="expiryDate">Fecha de vencimiento</label>
-                    <input type="text" id="expiryDate" placeholder="MM/YY" required>
-                </div>
-                <div class="form-group">
-                    <label for="cvv">CVV</label>
-                    <input type="password" id="cvv" maxlength="3" required>
-                </div>
-                <button type="submit" id="buyButton">Comprar</button>
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        <button id="boton-compra" onclick="mostrarMensaje()">Finalizar Compra</button>
-        <div class="mensaje" style="display: none;">Compra realizada con éxito. ¡Gracias por tu compra!</div>
-    </footer>
-
-    <script src="../js/carrito.js"></script>
-</body>
-</html>

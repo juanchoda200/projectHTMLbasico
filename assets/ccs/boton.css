@@ -87,6 +87,48 @@ li:hover>.submenu {
     line-height: 1.5;
     font-weight: 700;
 }
+
+#testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ADD8E6;
+    text-align: left;
+    flex: 1 0 50%;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    float: left;
+    margin-right: 10px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.testimonial-autor {
+    font-weight: bold;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
 @media screen and (max-width: 480px) {
     ul {
         display: flex;
@@ -97,7 +139,7 @@ li:hover>.submenu {
     }
 
     .contenedor-der {
-        position: absolute;
+        display: none;
         height: 100vh;
         width: 80%;
         background-color: #ADD8E6;
@@ -118,6 +160,7 @@ li:hover>.submenu {
 }
 
 .mostrar-menu {
+    display: block;
     right: 0;
 }
 

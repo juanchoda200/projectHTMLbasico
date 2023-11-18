@@ -111,33 +111,54 @@ if (closeButton) {
 
 // En la pagina de inicio de incio (index.html). puedes mostrar el nombre de usuario
 function mostrarNombreUsuario() {
-  const userName = localStorage.getItem ("username");
+  // Obtiene la información del usuario desde el localStorage
+  const user = JSON.parse(localStorage.getItem("USURIO_ACTUAL"));
+  
+  // Obtiene referencias a elementos del DOM
   const usernameDisplay = document.getElementById("username-display");
   const infoUser = document.getElementById("user-info");
-  const loginitem = document.getElementById("login-item")
- 
+  const loginitem = document.getElementById("login-item");
+
+  // Muestra la sección de información del usuario y oculta el botón de inicio de sesión
   infoUser.style.display = "block";
   loginitem.style.display = "none";
 
-  if (username && usernameDisplay) {
-    usernameDisplay.textContent = 'Bienvenido, ${username}!';
-    // Agregar cualquier logica adicional para mostrar la foto del usuario u otra informacion.
+  // Verifica si se obtuvo información válida del usuario y si existe un elemento para mostrar el nombre
+  if (user && usernameDisplay) {
+      // Actualiza el contenido del elemento con un mensaje de bienvenida
+      usernameDisplay.textContent = `Bienvenido, ${user.nombre}`;
+      // Puedes agregar aquí cualquier lógica adicional para mostrar la foto del usuario u otra información.
   }
+
+  // Establece el estado de inicio de sesión en false (podría no ser necesario, dependiendo de tu lógica)
   localStorage.setItem("login", false);
 }
 
 if (localStorage.getItem("login")) {
-  // Llama la funcion para mostrar el nombre del usuario en la pagina de inicio 
-  mostrarNombreUsuario()
+  // Llama la función para mostrar el nombre del usuario en la página de inicio 
+  mostrarNombreUsuario();
 }
 
 function cerrarSesion() {
   const infoUser = document.getElementById("user-info");
   const loginItem = document.getElementById("login-item");
 
+  // Obtiene la información del usuario desde el localStorage
+  const user = JSON.parse(localStorage.getItem("USURIO_ACTUAL"));
 
+  // Muestra el nombre del usuario debajo de la sección de información del usuario
+  if (user && usernameDisplay) {
+      // Puedes ajustar aquí la presentación del nombre del usuario al cerrar sesión.
+      usernameDisplay.textContent = `Hasta luego, ${user.nombre}!`;
+  }
+
+  // Establece el estado de inicio de sesión en false
   localStorage.setItem("login", false);
+
+  // Oculta la sección de información del usuario y muestra el botón de inicio de sesión
   infoUser.style.display = "none";
   loginItem.style.display = "block";
 
+  // Redirige a la página de inicio u otra página relevante después de cerrar sesión
+  window.location.href = "index.html";
 }

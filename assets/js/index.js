@@ -50,5 +50,49 @@ function cerrarSesion() {
   localStorage.setItem("login", false);
   infoUser.style.display = "none";
   loginItem.style.display = "block";
+}
 
+const testimonios = [
+  {
+    imagen:"ruta-de-la-imagen-1",
+    reseña:"Texto de la reseña del cliente 1.",
+    autor: "Nombre del cliente 1"
+  },
+  {
+    imagen:"ruta-de-la-imagen-1",
+    reseña:"Texto de la reseña del cliente 1.",
+    autor: "Nombre del cliente 1"
+  },
+  {
+    imagen:"ruta-de-la-imagen-1",
+    reseña:"Texto de la reseña del cliente 1.",
+    autor: "Nombre del cliente 1"
+  },
+];
+
+function cargarTestimonios() {
+  const testimonioContainer = document.getElementById("testimonial-container");
+  
+  testimonios.forEach(testimonio => {
+    const testimonioDiv = document.createElement("div");
+    testimonioDiv.classList.add("testimonial");
+    
+    const imagen = document.createElement("img");
+    imagen.src = testimonio.imagen;
+    imagen.alt = testimonio.autor;
+    
+    const reseña = document.createElement("p");
+    reseña.classList.add("testimonial-text");
+    reseña.textContent = testimonio.reseña;
+    
+    const autor = document.createElement("p");
+    autor.classList.add("testimonial-author");
+    autor.textContent = testimonio.autor;
+    
+    testimonioDiv.appendChild(imagen);
+    testimonioDiv.appendChild(reseña);
+    testimonioDiv.appendChild(autor);
+    
+    testimonioContainer.appendChild(testimonioDiv);
+  });
 }
