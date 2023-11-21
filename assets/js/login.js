@@ -24,5 +24,5 @@ function verificarCredenciales(username, password) {
 function redirigirAlInicio() {
   // Redirige al usuario a la página de inicio (cambia "index.html" al nombre de tu página de inicio)
   localStorage.setItem("login", true);
-  window.location.href = "index.html";
+  window.location.href = "../../index.html";
 }

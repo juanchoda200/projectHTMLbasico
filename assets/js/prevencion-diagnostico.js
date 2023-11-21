@@ -141,8 +141,7 @@ if(JSON.parse(localStorage.getItem("listProductosCarrito"))){
 }
 
 function agregarCarrito(){
-
-    newProductCarrito = listProductos[currentIndex];
+    const newProductCarrito = listProductos[currentIndex];
     productosCarrito.push(newProductCarrito);
     localStorage.setItem("listProductosCarrito", JSON.stringify(productosCarrito));
 }

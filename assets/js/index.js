@@ -1,6 +1,9 @@
 const menu = document.getElementById("menu")
 const toggleButton = document.getElementById("menu-toggle")
 const closeButton = document.getElementById('menu-cerrar')
+const infoUser = document.getElementById("user-info")
+
+infoUser.style.display = "none";
 
 if (toggleButton) {
   toggleButton.addEventListener('click', () => {
@@ -31,13 +34,14 @@ function mostrarNombreUsuario() {
   loginitem.style.display = "none";
 
   if (username && usernameDisplay) {
-    usernameDisplay.textContent = 'Bienvenido, ${username}!';
+
+    usernameDisplay.textContent = `Bienvenido, ${userName}!`;
     // Agregar cualquier logica adicional para mostrar la foto del usuario u otra informacion.
   }
   localStorage.setItem("login", false);
 }
 
-if (localStorage.getItem("login")) {
+if (localStorage.getItem("login") === "true") {
   // Llama la funcion para mostrar el nombre del usuario en la pagina de inicio 
   mostrarNombreUsuario()
 }
@@ -96,3 +100,4 @@ function cargarTestimonios() {
     testimonioContainer.appendChild(testimonioDiv);
   });
 }
+
