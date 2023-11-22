@@ -11,7 +11,7 @@
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -94,48 +94,81 @@ li:hover>.submenu {
     line-height: 1.5;
     font-weight: 700;
 }
-
-#testimonial-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
+/* Estilos generales para los testimonios */
 .testimonial {
-    width: 300px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ADD8E6;
-    text-align: left;
-    flex: 1 0 50%;
-}
-
-.testimonial img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    object-fit: cover;
-    float: left;
-    margin-right: 10px;
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 5px;
-}
-
-.testimonial-autor {
-    font-weight: bold;
-}
-
-.testimonial-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
-}
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #C0DFF6
+  }
+  
+  .testimonial-imagen {
+    text-align: left;
+    max-width: 100%;
+  }
+  
+  .img-dental {
+    border-radius: 50%;
+  }
+  
+  .testimonial-user {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .testimonial-user-company {
+    color: #000000;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-star-rating {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-star-rating li {
+    margin-right: 5px;
+  }
+  
+  /* Estilos para el contenido del testimonio */
+  .testimonial-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-text {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #555;
+  }
+  
+  .testimonial-quote {
+    font-size: 2em;
+    color: #888;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para las estrellas usando FontAwesome (asegúrate de incluir FontAwesome en tu proyecto) */
+  .testimonial-star-rating i::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f005'; /* Código Unicode para una estrella sólida */
+    color: #FFD700; /* Color amarillo para las estrellas */
+  }
 
+  .fa-solid .fa-star {
+
+  }
 @media screen and (max-width: 480px) {
     ul {
         display: flex;
