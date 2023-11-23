@@ -1,10 +1,14 @@
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  min-height: 100px;
+  min-height: 100vh;
   justify-content: center;
+
   align-items: center;
+  margin: 0;
 }
+
+
 
 form {
   padding: 50px 55px;
@@ -22,12 +26,11 @@ form {
 }
 
 h2 {
-  color: #ff9900;
   font-size: 19px;
 }
 
 label {
-  color: #ff9900;
+  color: #000000;
   font-size: 19px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -60,10 +63,18 @@ input, textarea {
   line-height: 1;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .banner {
 position: relative;
 width: 100%;
 height: 100vh;
+margin: 0;
+ padding: 0;
 background-image: url(../imageness/pexels-pixabay-326576.jpg);
 background-position: center;
 background-repeat: no-repeat;
@@ -77,6 +88,119 @@ background-size: cover;
   top: 0;
   left: 0;
 }
+
+.contenido {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.contenido h1 {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.contenido .button {
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 9px 20px;
+  text-transform: uppercase;
+  border: 1px solid #FFFFFF;
+  transition: all .3s ease-in-out;
+  width: 150px;
+}
+
+  
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.form2 {
+  width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio entre el banner y el formulario */
+}
+
+
+
+.formulario {
+  text-align: center;
+}
+
+.formulario form {
+  max-width: 400px; /* Ajusta según sea necesario */
+  margin: 0 auto;
+}
+
+
+
+
+
+
+label {
+  color: #000000;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: block; /* Hace que cada etiqueta esté en una nueva línea */
+}
+
+
+input, textarea {
+  padding: 17px 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  border: #FFFFFF;
+  color: #ff9900;
+  outline: none;
+  width: 100%; /* O ajusta según sea necesario */
+}
+
+.sede {
+  margin: -9px 0px 0px 0px;
+  padding: 0px 0px 20px 0px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.banner {
+position: relative;
+width: 100%;
+height: 100vh;
+margin: 0;
+ padding: 0;
+background-image: url(../imageness/pexels-pixabay-326576.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.capa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .contenido {
   margin: 0;
   padding: 0;
@@ -107,7 +231,7 @@ background-size: cover;
 
 form {
     width: 100%;
-    
+    background-color: #ADD8E6;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     text-align: center;
@@ -116,13 +240,10 @@ form {
   }
   
 .container {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px;
-  width: 1200px;
-  height: 245px;
+  height: 100%;
 }
 
 .form2 {
@@ -133,3 +254,33 @@ form {
     padding: 20px;
     margin-bottom: 20px; /* Espacio entre el banner y el formulario */
 }
+
+.lab2 {
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;;
+  padding: 20px;
+  margin-bottom: 20px;
+  float: right;
+  text-align: left;
+  margin-top: 0;
+}
+
+.sede {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  text-align: right;
+}
+
+.formulario {
+  text-align: center;
+}
+
+.formulario form {
+  max-width: 400px; /* Ajusta según sea necesario */
+  margin: 0 auto;
+}
+
