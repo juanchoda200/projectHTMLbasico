@@ -98,7 +98,6 @@ li:hover>.submenu {
 /* Estilos generales para los testimonios */
 .testimonial {
     display: inline-block;
-    width: 48%;
     text-align: center;
     margin-bottom: 20px;
     background-color: #C0DFF6;
@@ -119,11 +118,15 @@ li:hover>.submenu {
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
+
   .testimonial-user-company {
     color: #000000;
     font-size: 0.9em;
     margin-bottom: 10px;
+  }
+  
+  .checked {
+    color: orange;
   }
   
   .testimonial-star-rating {
@@ -133,6 +136,7 @@ li:hover>.submenu {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    gap: 0;
   }
   
   .testimonial-star-rating li {
@@ -148,7 +152,7 @@ li:hover>.submenu {
   .testimonial-text {
     font-size: 1em;
     line-height: 1.4;
-    color: #555;
+    color: #000000;
   }
   
   .testimonial-quote {
