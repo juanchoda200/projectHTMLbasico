@@ -235,3 +235,15 @@ img {
   .footer-logo{
       width: 200px;
   }
+
+  @media screen and (max-width: 480px) {
+    .contenedor-trabajador {
+      width: 100%;
+      flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+      align-items: center; /* Centra los elementos en pantallas pequeñas */
+  }
+
+  
+
+  }
+  

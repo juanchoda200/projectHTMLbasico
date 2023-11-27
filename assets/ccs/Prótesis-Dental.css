@@ -121,3 +121,27 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 480px) {
+    main {
+        grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas más pequeñas */
+      }
+    
+      aside {
+        order: -1; /* Cambiar el orden para que la barra lateral aparezca primero en el orden de presentación */
+      }
+
+      header {
+        flex-direction: column; /* Cambiar la dirección del eje principal a columna en pantallas más pequeñas */
+        align-items: flex-start; /* Alinear elementos al inicio en pantallas más pequeñas */
+      }
+    
+      header img {
+        margin-bottom: 10px; /* Añadir un margen inferior a la imagen en pantallas más pequeñas */
+      }
+    
+      header input[type="text"] {
+        width: 100%; /* Hacer que el campo de búsqueda ocupe el ancho completo en pantallas más pequeñas */
+        margin-top: 10px; /* Añadir un margen superior al campo de búsqueda en pantallas más pequeñas */
+      }
+}
