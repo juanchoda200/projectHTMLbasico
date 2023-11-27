@@ -1,10 +1,9 @@
 // Array de productos
-let products = JSON.parse(localStorage.getItem("listProductosCarrito"));
+let products = JSON.parse(localStorage.getItem("listProductosCarrito")) || [];
 
 // Carrito de compras
 let cart = [];
 let productContainer = document.querySelector("#lista-productos");
-console.log(productContainer);
 
 // Función para mostrar productos en la página
 function displayProducts() {
@@ -29,7 +28,7 @@ function displayProducts() {
 function updateCart() {
   const cartItems = document.getElementById("cart-items");
   const cartTotal = document.getElementById("cart-total");
-  cartItems.innerHTML = ""; // <-- Error en esta línea
+ 
   let total = 0;
 
   cart.forEach((item, index) => {
@@ -39,7 +38,6 @@ function updateCart() {
     total += item.price;
   });
 
-  cartTotal.textContent = "" + total;
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
@@ -68,21 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location = "./prevencion-diagnostico.html";
     });
   });
-});
-
-document.getElementById('paymentForm').addEventListener('submit', function (event) {
-  event.preventDefault();
-  var cardNumber = document.getElementById('cardNumber').value;
-  var expiryDate = document.getElementById('expiryDate').value;
-  var cvv = document.getElementById('cvv').value;
-
-  if (cardNumber && expiryDate && cvv) {
-    // Aquí iría la lógica para realizar la compra con la tarjeta
-    // Por ejemplo, podrías llamar a una API de pagos o simular la transacción
-    alert("Compra realizada con éxito");
-  } else {
-    alert("Por favor complete todos los campos");
-  }
 });
 
 const menu = document.getElementById("menu")
@@ -178,7 +161,6 @@ function contarProductosEnCarrito() {
 // Llama a la función para contar productos
 contarProductosEnCarrito();
 
-
 // Función para limpiar el carrito
 function limpiarCarrito() {
   // Vacía el array cart
@@ -192,9 +174,27 @@ function limpiarCarrito() {
 }
 
 // Puedes llamar a esta función en respuesta a un evento, por ejemplo, al hacer clic en un botón:
-// Supongamos que tienes un botón con el id "limpiar-carrito-btn"
-const limpiarCarritoBtn = document.getElementById("limpiar-carrito-btn");
+// Supongamos que tienes un botón
 
-if (limpiarCarritoBtn) {
-  limpiarCarritoBtn.addEventListener("click", limpiarCarrito);
+// Función para resetear el almacenamiento local
+function resetearLocalStorage() {
+  localStorage.clear();
+  console.log("LocalStorage reseteado.");
 }
+
+// Llama a la función para resetear el almacenamiento local en respuesta a un evento, por ejemplo, al hacer clic en un botón:
+// Supongamos que tienes un botón con el id "resetear-localstorage-btn"
+const resetearLocalStorageBtn = document.getElementById("resetear-localstorage-btn");
+
+if (resetearLocalStorageBtn) {
+  resetearLocalStorageBtn.addEventListener("click", resetearLocalStorage);
+}
+
+// Agrega este bloque al final de tu archivo JavaScript
+document.getElementById('resetear-localstorage-btn').addEventListener('click', function () {
+  // Resetea el localStorage
+  localStorage.clear();
+
+  // Recarga la página para reflejar los cambios
+  location.reload();
+});

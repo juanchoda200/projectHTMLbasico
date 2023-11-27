@@ -1,59 +1,17 @@
-/* Estilos para el carrito */
-.carrito {
-  border: 1px solid #2e8b57;
-  width: 35%;
-  margin-top: 30px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: auto;
-  position: sticky;
-  top: 0;
-  transition: 0.3s;
-}
+
 
 /* Estilos generales */
 body {
-  background: rgb(255, 255, 255);
-  font-family: sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #ADD8E6;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+  'Helvetica Neue', 'Ubuntu', sans-serif;
+  height: 100vh;
   margin: 0;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-/* Estilos para el encabezado */
-header {
-  width: 100%;
-  background-color: #ADD8E6;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.imagen {
-  width: 50px;
-  border-radius: 5px;
-}
-
-/* Estilos para los enlaces */
-ul {
-  display: flex;
-  list-style: none;
-  justify-content: flex-end;
-  gap: 40px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #000;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Estilos para los submenús */
@@ -93,43 +51,73 @@ li:hover > .submenu {
   font-weight: 700;
 }
 
-/* Estilos para el contenedor */
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Estilos para el formulario */
-form {
+section {
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 400px;
+  height: 112px;
+  border-radius: 6px;
+  justify-content: space-between;
 }
 
-/* Estilos para el grupo de formulario */
-.form-group {
-  margin-bottom: 15px;
+.product {
+  display: flex;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Estilos para la entrada de formulario */
-input {
-  padding: 10px;
+p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.154px;
+  color: #242d60;
+  height: 100%;
   width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
-  margin-top: 5px;
 }
-
-/* Estilos para el botón de formulario */
+img {
+  border-radius: 6px;
+  margin: 10px;
+  width: 54px;
+  height: 57px;
+}
+h3,
+h5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.154px;
+  color: #242d60;
+  margin: 0;
+}
+h5 {
+  opacity: 0.5;
+}
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  height: 36px;
+  background: #556cd6;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  border: 0;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  letter-spacing: 0.6;
+  border-radius: 0 0 6px 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
 }
-
 button:hover {
-  background-color: #0056b3;
+  opacity: 0.8;
 }
