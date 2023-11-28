@@ -1,119 +1,22 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: navajowhite; /* Color de fondo verde */
+    color: white; /* Color de texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-header {
-    background-color:#ADD8E6;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-header img {
-    width: 100px;
-}
-
-header input[type="text"] {
-    padding: 5px;
-    width: 300px;
-}
-
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-
-.product {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-}
-
-.product img {
-    width: 150px;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.productImg {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
+    width: 150px;
+    max-height: 100%
 }
 
-button.view-details {
-    background-color: #ff9900;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-aside {
-    margin: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    position: sticky;
-    top: 100px;
-}
-
-aside ul {
-    list-style: none; /* Esto elimina los puntos de la lista */
-    padding: 0; /* Elimina el relleno predeterminado de la lista */
-}
-
-#comments {
-    margin: 20px;
-    padding: 10px;
-}
-
-textarea#comment-input {
-    width: 100%;
-    padding: 10px;
-}
-
-button#add-comment {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 200px auto;
-    
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 20px 0 10px 0;
-}
-
-#search {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    font-size: 14px;
-}
-
-#search-button {
-    background: #ff9900;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    cursor: pointer;
-}
-
-#search-button img {
-    width: 20px;
-    height: 20px;
+.productName {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
 }

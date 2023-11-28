@@ -166,6 +166,103 @@ form {
   clear: both;
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  /* Estilos del formulario principal */
+  form {
+    padding: 50px 25px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  label {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  input, textarea {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+  }
+
+  /* Otros estilos específicos */
+  .sede {
+    margin: -9px 0 0 0;
+    padding: 0 0 15px 0;
+  }
+
+  .Ceste {
+    font-size: 16px;
+  }
+
+  /* Estilos del banner */
+  html, body {
+    height: auto;
+  }
+
+  .banner {
+    height: 20vh;
+  }
+
+  .capa {
+    display: none;
+  }
+
+  .contenido h1 {
+    font-size: 24px;
+    margin: 10px;
+  }
+
+  .contenido .button {
+    padding: 7px 15px;
+    font-size: 14px;
+    width: 120px;
+  }
+
+  /* Estilos del contenedor */
+  .container {
+    height: auto;
+  }
+
+  /* Estilos del segundo formulario */
+  .form2 {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Estilos generales del formulario */
+  .formulario form {
+    max-width: none;
+  }
+
+  /* Estilos del formulario principal */
+  form {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Estilos de la etiqueta en el formulario 2 */
+  .lab2 {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 
 
 

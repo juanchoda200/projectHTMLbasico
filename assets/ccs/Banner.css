@@ -16,3 +16,18 @@
   border-top: 2px solid green;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 480px) {
+  .container-banner {
+    height: 150px; /* Ajusta la altura según tus necesidades */
+  }
+
+  .container-banner img {
+    max-width: 80%; /* Puedes ajustar el ancho máximo de la imagen */
+    max-height: 80%; /* Puedes ajustar la altura máxima de la imagen */
+  }
+
+  .separador {
+    margin-top: 5px; /* Ajusta el margen superior del separador */
+  }
+}

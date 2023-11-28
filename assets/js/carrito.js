@@ -198,3 +198,54 @@ document.getElementById('resetear-localstorage-btn').addEventListener('click', f
   // Recarga la página para reflejar los cambios
   location.reload();
 });
+
+// Función para crear vista del producto
+function producto(name, brand, price, image) {
+  // Creamos un contenedor div para cada producto
+  const productContainer = document.createElement('div');
+  productContainer.className = 'product-container';
+
+  // Creamos el elemento div con clase 'product'
+  const productDiv = document.createElement('div');
+  productDiv.className = 'product';
+
+  // Creamos elementos con características HTML
+  const imagen = document.createElement('img');
+  imagen.src = image;
+  imagen.alt = name;
+  imagen.className = 'imagen';
+
+  const nombre = document.createElement('h3');
+  nombre.innerText = name;
+
+  const precio = document.createElement('p');
+  precio.innerText = '$' + price.toFixed(2);
+
+  const boton = document.createElement('button');
+  boton.innerText = 'Agregar al Carrito';
+  boton.onclick = function () {
+    agregarAlCarrito(name, brand, price, image);
+  };
+
+  // Agregamos los elementos al contenedor
+  productDiv.appendChild(imagen);
+  productDiv.appendChild(nombre);
+  productDiv.appendChild(precio);
+  productDiv.appendChild(boton);
+
+  // Agregamos el elemento 'product' al contenedor principal
+  productContainer.appendChild(productDiv);
+
+  // Pintamos el contenedor en el DOM
+  document.getElementById('lista-productos').appendChild(productContainer);
+}
+
+// Función para agregar al carrito
+function agregarAlCarrito(name, brand, price, image) {
+  const productToAdd = { name, brand, price, image };
+  cart.push(productToAdd);
+  updateCart();
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// ...

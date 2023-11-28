@@ -117,3 +117,70 @@ main {
     width: 20px;
     height: 20px;
 }
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Ajusta el tamaño de fuente según tus necesidades */
+    }
+
+    header {
+        padding: 5px; /* Ajusta el relleno del encabezado */
+    }
+
+    header img {
+        width: 80px; /* Ajusta el ancho de la imagen del encabezado */
+    }
+
+    header input[type="text"] {
+        width: 200px; /* Ajusta el ancho del campo de entrada de texto en el encabezado */
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas en lugar de cuatro */
+    }
+
+    .product {
+        padding: 5px; /* Ajusta el relleno del producto */
+    }
+
+    .product img {
+        width: 100px; /* Ajusta el ancho de la imagen del producto */
+    }
+
+    aside {
+        margin: 10px; /* Ajusta el margen del aside */
+    }
+
+    #comments {
+        margin: 10px; /* Ajusta el margen de los comentarios */
+    }
+
+    textarea#comment-input {
+        padding: 5px; /* Ajusta el relleno del área de comentarios */
+    }
+
+    button#add-comment {
+        padding: 3px 6px; /* Ajusta el relleno del botón de agregar comentario */
+    }
+
+    main {
+        grid-template-columns: 100%; /* Cambia a una sola columna */
+    }
+
+    .search-bar {
+        margin: 10px 0 5px 0; /* Ajusta el margen de la barra de búsqueda */
+    }
+
+    #search {
+        font-size: 12px; /* Ajusta el tamaño de fuente del campo de búsqueda */
+    }
+
+    #search-button {
+        padding: 6px; /* Ajusta el relleno del botón de búsqueda */
+    }
+
+    #search-button img {
+        width: 15px; /* Ajusta el tamaño de la imagen del botón de búsqueda */
+        height: 15px;
+    }
+}

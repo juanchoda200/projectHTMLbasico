@@ -101,3 +101,29 @@ function cargarTestimonios() {
   });
 }
 
+// Función para agregar productos al carrito
+function addToCart(index) {
+  const product = products[index];
+  cart.push(product);
+  updateCart();
+}
+
+// Manejar clic en "Ver detalles" y agregar al carrito
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("view-details")) {
+      const index = e.target.getAttribute("data-index");
+      showProductDetails(index);
+      addToCart(index); // Agregar el producto al carrito cuando se haga clic en "Ver detalles"
+  }
+});
+
+let productosCarrito = [];
+if(JSON.parse(localStorage.getItem("listProductosCarrito"))){
+  productosCarrito = JSON.parse(localStorage.getItem("listProductosCarrito"));
+}
+
+function agregarCarrito(){
+  const newProductCarrito = listProductos[currentIndex];
+  productosCarrito.push(newProductCarrito);
+  localStorage.setItem("listProductosCarrito", JSON.stringify(productosCarrito));
+}
