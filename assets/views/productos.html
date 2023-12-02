@@ -1,35 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../ccs/productos.css">
-    <title>Productos-DentalHouse</title>
-</head>
-
-<body>
+    <meta name="author" content="Juan David Berrio">
+    <meta name="description" content="Dental House es una empresa especializada en la venta de insumos y equipos de odontología. Estamos ubicados en el barrio 20 de julio de Bogotá, Colombia.
+  
+      En nuestra tienda encontrarás una amplia variedad de productos de las mejores marcas, a precios competitivos. Contamos con un equipo de profesionales con amplia experiencia en el sector, que te ayudarán a encontrar los productos que necesitas para tu práctica odontológica.
+      
+      Ofrecemos diferentes opciones de pago y envío, para que puedas realizar tus compras de forma cómoda y sencilla.
+      
+      Visita nuestra página web para conocer más sobre nuestros productos y servicios.">
+    <meta name="keywords" content="odontología, insumos, equipos, productos, precio, envío, ventas">
+    <title>Dental House</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  
+    <link rel="stylesheet" href="../ccs/productos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  
+  <body>
     <header>
-        <div>
-            <a href="../../index.html">
-                <img src="../imageness/DentalLogo.webp" alt="Logo de la Marca">
-            </a>
-        </div>
-        <div class="search-bar">
-            <div>
-                <input type="text" id="search" placeholder="Buscar productos..." />
-                <button id="search-button">
-                    <img src="../imageness/buscar.png" alt="Icono de búsqueda" />
-                </button>
-            </div>
-
-            <div id="search-results"></div>
-        </div>
-        <div class="cart-button">
-            <a href="../views/carrito.html">
-                <img src="../imageness/carrito-de-compras (4).png" alt="Carrito de compras">
-            </a>
-        </div>
+      <div class="contenedor-izq">
+        <img src="../imageness/file.png" class="imagen">
+      </div>
+      <i class="navbar__toggle" id="menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="35" height="35"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M14 4h6v6h-6z"></path>
+          <path d="M4 14h6v6h-6z"></path>
+          <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+          <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+        </svg>
+      </i>
+  
+      <div class="contenedor-der" id="menu">
+        <i class="navbar__close" id="menu-cerrar">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="35" height="35"
+            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </i>
+  
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li>
+            <a href="../views/quienessomos.html">Nosotros</a>
+            <ul class="submenu">
+              <li><a href="../views/vacantes.html">vacantes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../views/productos.html">Productos</a>
+          </li>
+          <li><a href="../views/Contacto.html">Contacto</a></li>
+          <li id="login-item">
+            <a href="../views/login.html"><img src="../imageness/inicio de sesion 1.webp" alt="inicio"></a>
+          </li>
+  
+          <li>
+            <a href="../views/carrito.html"><img src="../imageness/carrito-de-compras (4).png"
+                alt="Carrito de compras"></a>
+          </li>
+          <div id="user-info" class="user-info">
+            <p id="username-display"></p>
+            <img id="user-image" src="../imageness/usuario.png" alt="User Image" width="30">
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+          </div>
+        </ul>
+      </div>
+      <p id="username"></p>
     </header>
 
     <main>

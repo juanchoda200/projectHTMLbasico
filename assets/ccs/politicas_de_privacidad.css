@@ -1,0 +1,19 @@
+.pol {
+    color: #ADD8E6;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #FFFF;
+}
+
+p {
+    line-height: 1.5; 
+    margin: 10px 0; /* Márgenes superior e inferior */
+    padding: 5px; /* Relleno interno */
+    text-align: center;
+    
+}
+
+section {
+    max-width: 1200px;
+   
+}
