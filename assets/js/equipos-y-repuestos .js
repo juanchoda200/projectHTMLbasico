@@ -1,6 +1,6 @@
 const products = [
-  { id: 0, name: "", brand: "Marca 1", price: 3000, image: "../imageness/ZIRCONFILL.png" },
-    { id: 1, name: "", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
+  { id: 0, name: "", brand: "Marca profilad", price: 3000, image: "../imageness/ZIRCONFILL.png" },
+    { id: 1, name: "", brand: "Marca m3", price: 3000, image: "../imageness/ZIRCONFILL.png" },
     { id: 2, name: "", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
     { id: 3, name: "", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
     { id: 4, name: "", brand: "Marca 1", price: 3000, image: "imageness/6ef0073f-61cc-495d-959b-d661d47c4421.png" },
@@ -41,33 +41,39 @@ function listarProductos() {
   });
 }
 
+let listaProductos = document.querySelector("#lista-productos");
+
+
 //Funcion para crear vista del producto
 function producto(id, name, brand, price, image) {
 
-  // Creamos elementos con características HTML
-  const imagen = document.createElement('img');
-  imagen.src = image;
-  imagen.className = 'productImg';
+  let productDiv = document.createElement("div");
 
-  const nombre = document.createElement('h2');
-  nombre.innerText = name;
-  nombre.className = 'productName';
+    productDiv.classList.add("product", "product-container-2");
+    productDiv.setAttribute("id", id);
 
-  const marca = document.createElement('p');
-  marca.innerText = 'Marca: ' + brand;
+    // Muestra la imagen según la propiedad 'image' de cada producto
+    productDiv.innerHTML = `
+      <img src="${image}" alt="${name}" width="100px">  
+      <h2>${name}</h2>
+      <p>Marca: ${brand}</p>
+      <p>Precio: $${price}</p>
+      <button class="add-to-cart" id="${id}" onclick="addCart(${id})">Agregar al carrito</button>`;
+    productContainer.appendChild(productDiv); 
+}
 
-  const precio = document.createElement('p');
-  precio.innerText = 'Precio: $' + price;
+let cart = [];
 
-  const boton = document.createElement('button');
-  boton.innerText = 'Agregar al carrito';
-  
-  //pintamos los elementos en el DOM, dependera el orden
-  document.body.appendChild(imagen);
-  document.body.appendChild(nombre);
-  document.body.appendChild(marca);
-  document.body.appendChild(precio);
-  document.body.appendChild(boton);
+
+
+function addCart (id){
+  cart.push(products[id])
+  console.log(cart)
+  Cantidaddecarrito()
+}
+
+function Cantidaddecarrito (){
+  console.log (cart.length)
 }
 
 // Crear un contenedor para los productos
