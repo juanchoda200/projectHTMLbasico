@@ -1,213 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Juan David Berrio">
-    <meta name="description" content="Dental House es una empresa especializada en la venta de insumos y equipos de odontología. Estamos ubicados en el barrio 20 de julio de Bogotá, Colombia.
-  
-      En nuestra tienda encontrarás una amplia variedad de productos de las mejores marcas, a precios competitivos. Contamos con un equipo de profesionales con amplia experiencia en el sector, que te ayudarán a encontrar los productos que necesitas para tu práctica odontológica.
-      
-      Ofrecemos diferentes opciones de pago y envío, para que puedas realizar tus compras de forma cómoda y sencilla.
-      
-      Visita nuestra página web para conocer más sobre nuestros productos y servicios.">
-    <meta name="keywords" content="odontología, insumos, equipos, productos, precio, envío, ventas">
-    <title>Dental House</title>
-    <style>
-      body {
-        text-align: center;
-      }
-    </style>
-  
-    <link rel="stylesheet" href="../ccs/productos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  
-  
-  <body>
-    <header>
-      <div class="contenedor-izq">
-        <img src="assets/imageness/file.webp" alt="Logo de la pagina" class="imagen">
-      </div>
-      <i class="navbar__toggle" id="menu-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="35" height="35"
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Juan David Berrio">
+  <meta name="description" content="Dental House es una empresa especializada en la venta de insumos y equipos de odontología. Estamos ubicados en el barrio 20 de julio de Bogotá, Colombia.
+
+    En nuestra tienda encontrarás una amplia variedad de productos de las mejores marcas, a precios competitivos. Contamos con un equipo de profesionales con amplia experiencia en el sector, que te ayudarán a encontrar los productos que necesitas para tu práctica odontológica.
+    
+    Ofrecemos diferentes opciones de pago y envío, para que puedas realizar tus compras de forma cómoda y sencilla.
+    
+    Visita nuestra página web para conocer más sobre nuestros productos y servicios.">
+  <meta name="keywords" content="odontología, insumos, equipos, productos, precio, envío, ventas">
+  <title>Dental House</title>
+  <style>
+    body {
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/ccs/boton.css">
+  <link rel="stylesheet" href="../ccs/productos.css">
+</head>
+
+
+<body>
+  <header>
+    <div class="contenedor-izq">
+      <img src="assets/imageness/file.webp" alt="Logo de la pagina" class="imagen">
+    </div>
+    <i class="navbar__toggle" id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-2" width="35" height="35"
+        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M14 4h6v6h-6z"></path>
+        <path d="M4 14h6v6h-6z"></path>
+        <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+        <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+      </svg>
+    </i>
+
+    <div class="contenedor-der" id="menu">
+      <i class="navbar__close" id="menu-cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="35" height="35"
           viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
           stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M14 4h6v6h-6z"></path>
-          <path d="M4 14h6v6h-6z"></path>
-          <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-          <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+          <path d="M18 6l-12 12"></path>
+          <path d="M6 6l12 12"></path>
         </svg>
       </i>
-  
-      <div class="contenedor-der" id="menu">
-        <i class="navbar__close" id="menu-cerrar">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="35" height="35"
-            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M18 6l-12 12"></path>
-            <path d="M6 6l12 12"></path>
-          </svg>
-        </i>
-  
-        <ul>
-          <li><a href="../../index.html">Inicio</a></li>
-          <li>
-            <a href="../views/quienessomos.html">Nosotros</a>
-            <ul class="submenu">
-              <li><a href="../views/vacantes.html">vacantes</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="../views/productos.html">Productos</a>
-          </li>
-          <li><a href="../views/Contacto.html">Contacto</a></li>
-          <li id="login-item">
-            <a href="../views/login.html"><img src="../imageness/inicio de sesion 1.webp" alt="inicio"></a>
-          </li>
-  
-          <li>
-            <a href="../views/carrito.html"><img src="../imageness/carrito-de-compras (4).png"
-                alt="Carrito de compras"></a>
-          </li>
-          <div id="user-info" class="user-info">
-            <p id="username-display"></p>
-            <img id="user-image" src="../imageness/usuario.png" alt="User Image" width="30">
-            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+
+      <ul>
+        <li>
+          <a href="../views/quienessomos.html">Nosotros</a>
+          <ul class="submenu">
+            <li><a href="../views/vacantes.html">vacantes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../views/productos.html">Productos</a>
+        </li>
+        <li><a href="../views/Contacto.html">Contacto</a></li>
+        <li id="login-item">
+          <a href="../views/login.html"><img src="../imageness/inicio de sesion 1.webp" alt="inicio"></a>
+        </li>
+
+        <li>
+          <a href="assets/views/carrito.html"><img src="../imageness/carritoDecompra.webp" alt="Carrito de compras"></a>
+        </li>
+        <div id="user-info" class="user-info">
+          <p id="username-display"></p>
+          <img id="user-image" src="../imageness/perfil.webp" alt="User Image" width="32">
+          <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+      </ul>
+    </div>
+    <p id="username"></p>
+  </header>
+
+
+  <main>
+    <h2>Categoría De Productos</h2>
+    <section class="productos">
+      <div class="producto Resinas">
+        <a href="../views/Resinas.html">
+          <h1 class="color-resin">Resinas</h1>
+          <div class="cuadro">
+            <img src="../imageness/resinas.png" alt="Resinas" class="imagen">
           </div>
-        </ul>
+          <p class="color-info">Más información</p>
+        </a>
       </div>
-      <p id="username"></p>
-    </header>
+      <div class="producto materiales para impresión">
+        <a href="../views/materiales para impresión.html">
+          <h1 class="color-resin">Materiales Para Impresión</h1>
+          <img src="" alt="" class="imagen">
+          <p class="color-info">Más información</p>
+        </a>
+      </div>
+      <div class="producto Endodoncia">
+        <a href="../views/Endodoncia.html">
+          <h1 class="color-resin">Endodoncia</h1>
+          <img src="../imageness/facebook.png" alt="Endodoncia" class="imagen">
+          <p class="color-info">Más información</p>
+        </a>
+      </div>
+      <div class="producto LineaGeneral">
+        <a href="../views/LineaGeneral.html">
+          <h1 class="color-resin">Linea General</h1>
+          <div class="cuadro">
+            <img src="../imageness/linea.webp" alt="Resinas" class="imagen">
+          </div>
+          <p class="color-info">Más información</p>
+        </a>
+      </div>
+      <div class="producto Cirugía-Oral">
+        <a href="../views/Instrumental.html">
+          <h1 class="color-resin">Instrumental</h1>
+          <img src="" alt="" class="imagen">
+          <p class="color-info">Más información</p>
+        </a>
+      </div>
+      <div class="producto Ortodoncia">
+        <a href="../views/Ortodoncia.html">
+          <h1 class="color-resin">Ortodoncia</h1>
+          <img src="" alt="" class="imagen">
+          <p class="color-info">Más información</p>
+        </a>
+      </div>
+      <div class="producto Prótesis-Dental">
+        <a href="../views/Bioseguridad-y-Esterilización.html">
+          <h1 class="color-resin">Bioseguridad y Esterilización</h1>
+          <img src="" alt="" class="imagen">
+          <p class="color-info">Más información</p>
+        </a>
+      </div>
+      <div class="producto Prótesis-Dental">
+        <a href="../views/estética-pulido-y-rehabil.html">
+          <h1 class="color-resin">estética, pulido y rehabil</h1>
+          <div class="cuadro">
+            <img src="../imageness/estica1.webp" alt="" class="imagen">
+          </div>
+          <p class="color-info">Más información</p>
+        </a>
+      </div>
+      <div class="producto Prótesis-Dental">
+        <a href="../views/equipos-y-repuestos.html">
+          <h1 class="color-resin">equipos y repuestos </h1>
+          <div class="cuadro">
+            <img src="../imageness/equipos.webp" alt="" class="imagen">
+          </div>
+          <p class="color-info">Más información</p>
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <h2>Categoría De Productos</h2>
-        <section class="productos">
-            <div class="producto Resinas">
-                <a href="../views/Resinas.html">
-                    <h1 class="color-resin">Resinas</h1>
-                    <div class="cuadro">
-                        <img src="../imageness/resinas.png" alt="Resinas" class="imagen">
-                    </div>
-                    <p class="color-info">Más información</p>
-                </a>
-            </div>
-            <div class="producto materiales para impresión">
-                <a href="../views/materiales para impresión.html">
-                    <h1 class="color-resin">Materiales Para Impresión</h1>
-                    <img src="" alt="" class="imagen">
-                    <p class="color-info">Más información</p>
-                </a>
-            </div>
-            <div class="producto Endodoncia">
-                <a href="../views/Endodoncia.html">
-                    <h1 class="color-resin">Endodoncia</h1>
-                    <img src="../imageness/facebook.png" alt="Endodoncia" class="imagen">
-                    <p class="color-info">Más información</p>
-                </a>
-            </div>
-            <div class="producto LineaGeneral">
-                <a href="../views/LineaGeneral.html">
-                    <h1 class="color-resin">Linea General</h1>
-                    <div class="cuadro">
-                        <img src="../imageness/linea.webp" alt="Resinas" class="imagen">
-                    </div>
-                    <p class="color-info">Más información</p>
-                </a>
-            </div>
-            <div class="producto Cirugía-Oral">
-                <a href="../views/Instrumental.html">
-                    <h1 class="color-resin">Instrumental</h1>
-                    <img src="" alt="" class="imagen">
-                    <p class="color-info">Más información</p>
-                </a>
-            </div>
-            <div class="producto Ortodoncia">
-                <a href="../views/Ortodoncia.html">
-                    <h1 class="color-resin">Ortodoncia</h1>
-                    <img src="" alt="" class="imagen">
-                    <p class="color-info">Más información</p>
-                </a>
-            </div>
-            <div class="producto Prótesis-Dental">
-                <a href="../views/Bioseguridad-y-Esterilización.html">
-                    <h1 class="color-resin">Bioseguridad y Esterilización</h1>
-                    <img src="" alt="" class="imagen">
-                    <p class="color-info">Más información</p>
-                </a>
-            </div>
-            <div class="producto Prótesis-Dental">
-                <a href="../views/estética-pulido-y-rehabil.html">
-                    <h1 class="color-resin">estética, pulido y rehabil</h1>
-                <div class="cuadro">
-                    <img src="../imageness/estica1.webp" alt="" class="imagen">
-                </div>
-                <p class="color-info">Más información</p>
-                </a>
-            </div>
-            <div class="producto Prótesis-Dental">
-                <a href="../views/equipos-y-repuestos.html">
-                    <h1 class="color-resin">equipos y repuestos </h1>
-                    <div class="cuadro">
-                        <img src="../imageness/equipos.webp" alt="" class="imagen">
-                    </div>
-                    <p class="color-info">Más información</p>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <div class="contenedor-izq">
-              <a href="index.html">
-                <img src="../imageness/file.webp" alt="Logo de la Marca" class="imagen"
-                  style="width: 70px; margin-top: 10px; margin-right: 20px; cursor: pointer;">
-                <p class="footer-logo_text">Comprometidos con la excelencia, ofrecemos calidad superior y precios justos para nuestros Clientes.
-                </p>
-                <p class="footer-logo_text">Construimos relaciones sólidas basadas en la fidelidad y confianza en nuestros productos y servicios.
-                </p>
-                <p class="footer-logo_text">Elevamos los estándares, proporcionando soluciones odontológicas con integridad y compromiso.</p>
-                <div class="footer-redes">
-                  <a href="https://www.instagram.com/casacomercialdentalhouse/?igshid=MzRlODBiNWFlZA%3D%3D"
-                    class="footer-redes__link">
-                    <img src="../imageness/instagram.webp" alt="Instagram" class="footer-redes__img" width="25" height="25">
-                  </a>
-                  <a href="https://web.facebook.com/people/Dental-House-colombia/100067325186099/?mibextid=ZbWKwL"
-                    class="footer-redes__link">
-                    <img src="../imageness/facebook-_1_.webp" alt="Facebook" class="footer-redes__img" width="25" height="25">
-                  </a>
-                  <a href="https://api.whatsapp.com/message/RGHB447VAKJTC1?autoload=1&app_absent=0"
-                    class="footer-redes__link">
-                    <!-- Reemplaza "ruta_de_whatsapp" con la ruta de tu WhatsApp -->
-                    <img src="../imageness/whatsapp.webp" alt="WhatsApp" class="footer-redes__img" width="25" height="25">
-                  </a>
-                </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="contenedor-izq">
+          <a href="index.html">
+            <img src="../imageness/file.webp" alt="Logo de la Marca" class="imagen"
+              style="width: 70px; margin-top: 10px; margin-right: 20px; cursor: pointer;">
+            <p class="footer-logo_text">Comprometidos con la excelencia, ofrecemos calidad superior y precios justos
+              para nuestros Clientes.
+            </p>
+            <p class="footer-logo_text">Construimos relaciones sólidas basadas en la fidelidad y confianza en nuestros
+              productos y servicios.
+            </p>
+            <p class="footer-logo_text">Elevamos los estándares, proporcionando soluciones odontológicas con integridad
+              y compromiso.</p>
+            <div class="footer-redes">
+              <a href="https://www.instagram.com/casacomercialdentalhouse/?igshid=MzRlODBiNWFlZA%3D%3D"
+                class="footer-redes__link">
+                <img src="../imageness/instagram.webp" alt="Instagram" class="footer-redes__img" width="25" height="25">
+              </a>
+              <a href="https://web.facebook.com/people/Dental-House-colombia/100067325186099/?mibextid=ZbWKwL"
+                class="footer-redes__link">
+                <img src="../imageness/facebook-_1_.webp" alt="Facebook" class="footer-redes__img" width="25"
+                  height="25">
+              </a>
+              <a href="https://api.whatsapp.com/message/RGHB447VAKJTC1?autoload=1&app_absent=0"
+                class="footer-redes__link">
+                <!-- Reemplaza "ruta_de_whatsapp" con la ruta de tu WhatsApp -->
+                <img src="../imageness/whatsapp.webp" alt="WhatsApp" class="footer-redes__img" width="25" height="25">
               </a>
             </div>
-          </div>
-      
-          <div class="footer-derechos">
-            <p class="footer-derechos__text">Contacto</p>
-            <p class="footer-derechos_text"><a href="mailto:dentalhouse19@gmail.com">dentalhouse19@gmail.com</a></p>
-            <p class="footer-derechos_text">Bogotá: <a href="tel:+573168750417">316 875 0417</a></p>
-          </div>
-      
-          <div class="footer-info">
-            <p class="footer-info__text">Información</p>
-            <a href="../Términos de Uso de Dental House.html" class="footer-info_text">Políticas de Privacidad</a>
-            <br>
-            <a href="url_de_tus_politicas_de_privacidad" class="footer-info_text">Términos de Uso de Dental House</a>
-            <br>
-            <a href="url_de_tus_politicas_de_privacidad" class="footer-info_text">Políticas de devolución</a>
-          </div>
+          </a>
         </div>
-      </footer>
+      </div>
 
+      <div class="footer-derechos">
+        <p class="footer-derechos__text">Contacto</p>
+        <p class="footer-derechos_text"><a href="mailto:dentalhouse19@gmail.com">dentalhouse19@gmail.com</a></p>
+        <p class="footer-derechos_text">Bogotá: <a href="tel:+573168750417">316 875 0417</a></p>
+      </div>
+
+      <div class="footer-info">
+        <p class="footer-info__text">Información</p>
+        <a href="../Términos de Uso de Dental House.html" class="footer-info_text">Políticas de Privacidad</a>
+        <br>
+        <a href="url_de_tus_politicas_de_privacidad" class="footer-info_text">Términos de Uso de Dental House</a>
+        <br>
+        <a href="url_de_tus_politicas_de_privacidad" class="footer-info_text">Políticas de devolución</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/index.js"></script>
 </body>
 
 </html>

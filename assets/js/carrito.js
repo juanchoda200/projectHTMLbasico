@@ -53,3 +53,41 @@ document.body.appendChild(productContainer);
 document.addEventListener('DOMContentLoaded', function () {
   listarProductos();
 });
+
+// ...
+
+// Función para contar los productos en el carrito
+function contarProductosEnCarrito() {
+  // Puedes acceder al número de productos en el carrito a través de la longitud del array 'cart'
+  return cart.length;
+}
+
+// Función para crear la lista de productos en el carrito
+function crearListaCarrito() {
+  // Aquí puedes crear la estructura HTML para mostrar los productos en el carrito
+  // Puedes usar el array 'cart' para obtener la información de los productos
+  // Puedes mostrar información como nombre, marca, precio, etc.
+  // Puedes agregar esta información a un elemento en tu página, por ejemplo, un div con id 'carrito'
+  let carritoDiv = document.getElementById("carrito");
+  carritoDiv.innerHTML = ""; // Limpiamos el contenido actual
+
+  cart.forEach(product => {
+    let productInfo = document.createElement("div");
+    productInfo.innerHTML = `<p>${product.name} - ${product.brand} - $${product.price}</p>`;
+    carritoDiv.appendChild(productInfo);
+  });
+}
+
+// ...
+
+// Modificamos la función addCart para que después de agregar al carrito, actualice la lista en la página
+function addCart(id) {
+  cart.push(products[id]);
+  console.log(cart);
+  Cantidaddecarrito();
+
+  // Después de agregar al carrito, actualizamos la lista en la página
+  crearListaCarrito();
+}
+
+
